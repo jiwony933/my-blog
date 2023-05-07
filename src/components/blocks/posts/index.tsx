@@ -1,13 +1,16 @@
 import { FlexColumnBox } from 'src/styles/common';
 import PostCard from '../postCard';
 
-interface P {}
+interface P {
+  posts: any[];
+}
 
-const Posts = ({}: P) => {
+const Posts = ({ posts }: P) => {
   return (
     <FlexColumnBox gap={12}>
-      <PostCard />
-      <PostCard />
+      {posts.map((post) => (
+        <PostCard key={post.id} post={post} />
+      ))}
     </FlexColumnBox>
   );
 };

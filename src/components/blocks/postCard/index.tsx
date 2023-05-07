@@ -1,13 +1,13 @@
-interface P {}
+interface P {
+  post: PostSummary;
+}
 
-const PostCard = ({}: P) => {
+const PostCard = ({ post }: P) => {
   return (
     <Container>
-      <Title>글제목</Title>
-      <Summary>
-        글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약글요약요약
-      </Summary>
-      <Date>2023-03-03</Date>
+      <Title>{post.title}</Title>
+      <Summary>글요약글요약</Summary>
+      <Date>{post.date} 작성</Date>
     </Container>
   );
 };
@@ -26,6 +26,8 @@ export const Title = styled.div`
   font-size: 24px;
 `;
 
-export const Summary = styled.div``;
+export const Summary = styled.div`
+  color: var(--grey700);
+`;
 
 export const Date = styled.div``;
