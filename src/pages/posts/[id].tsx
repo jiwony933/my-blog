@@ -1,3 +1,6 @@
+import { ReactElement } from 'react';
+import Layout from 'src/components/layout/layout';
+
 interface P {}
 
 const ContentPage = ({}: P) => {
@@ -5,3 +8,7 @@ const ContentPage = ({}: P) => {
 };
 
 export default ContentPage;
+
+ContentPage.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
+};

@@ -1,0 +1,98 @@
+:root {
+  --grey50: #f8f9fa;
+  --grey100: #f3f4f5;
+  --grey200: #e6e8ea;
+  --grey300: #d3d6d9;
+  --grey400: #b3b8be;
+  --grey500: #8e959e;
+  --grey600: #6e7781;
+  --grey700: #5a6572;
+  --grey800: #414b58;
+  --grey900: #1e2023;
+
+  --red50: #fbe9e9;
+  --red100: #f6cbcb;
+  --red200: #eea0a0;
+  --red300: #e57373;
+  --red400: #ef5350;
+  --red500: #dd4646;
+  --red600: #da3434;
+  --red700: #d32727;
+  --red800: #c22424;
+  --red900: #b12020;
+
+  --blue50: #e9f3fe;
+  --blue100: #cae2fe;
+  --blue200: #93c4fc;
+  --blue300: #68adfb;
+  --blue400: #479bfa;
+  --blue500: #1f85f9;
+  --blue600: #0673ef;
+  --blue700: #0562cc;
+  --blue800: #044fa4;
+  --blue900: #033c7c;
+
+  --orange50: #fff3e0;
+  --orange100: #ffe0b2;
+  --orange200: #ffcc80;
+  --orange300: #ffb74d;
+  --orange400: #ffa726;
+  --orange500: #ff9800;
+  --orange600: #fb8c00;
+  --orange700: #f57c00;
+  --orange800: #ef6c00;
+  --orange900: #e65100;
+
+  --yellow50: #fffde7;
+  --yellow100: #fff9c4;
+  --yellow200: #fff59d;
+  --yellow300: #fff176;
+  --yellow400: #ffee58;
+  --yellow500: #fdd835;
+  --yellow600: #fdd835;
+  --yellow700: #fbc02d;
+  --yellow800: #f9a825;
+  --yellow900: #f57f17;
+
+  --purple50: #f3e5f5;
+  --purple100: #e1bee7;
+  --purple200: #ce93d8;
+  --purple300: #ba68c8;
+  --purple400: #ab47bc;
+  --purple500: #9c27b0;
+  --purple600: #8e24aa;
+  --purple700: #7b1fa2;
+  --purple800: #6a1b9a;
+  --purple900: #4a148c;
+
+  --teal50: #e1f0f2;
+  --teal100: #b1dade;
+  --teal200: #81c7cc;
+  --teal300: #4caeb5;
+  --teal400: #269da6;
+  --teal500: #008c96;
+  --teal600: #00818a;
+  --teal700: #007278;
+  --teal800: #006369;
+  --teal900: #004d4d;
+
+  --green50: #e5fff4;
+  --green100: #abf2d4;
+  --green200: #5ae9ad;
+  --green300: #1cd98a;
+  --green400: #05c072;
+  --green500: #00a661;
+  --green600: #009959;
+  --green700: #008a50;
+  --green800: #007544;
+  --green900: #005c36;
+
+  --kakao: #fee500;
+
+  --MAX_WIDTH: 1200px;
+  --MAX_BANNER_HEIGHT: 360px;
+
+  --BOTTOM_TAB_BAR_HEIGHT: 65px;
+
+  --overlay: rgba(0, 0, 0, 0.5);
+}

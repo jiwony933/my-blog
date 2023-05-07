@@ -1,7 +1,5 @@
-import { FlexBox, FlexColumnBox } from 'src/styles/common';
+import { FlexBox } from 'src/styles/common';
 import Logo from './logo';
-import SideBar from './side-bar';
-import Image from 'next/image';
 
 interface P {}
 
@@ -22,4 +20,6 @@ export const Container = styled(FlexBox)`
   z-index: 100;
   background-color: white;
   padding: 12px;
+  width: 100%;
+  max-width: var(--MAX_WIDTH);
 `;
