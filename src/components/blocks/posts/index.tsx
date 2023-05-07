@@ -7,7 +7,7 @@ interface P {
 
 const Posts = ({ posts }: P) => {
   return (
-    <FlexColumnBox gap={12}>
+    <FlexColumnBox>
       {posts.map((post) => (
         <PostCard key={post.id} post={post} />
       ))}
