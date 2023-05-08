@@ -83,6 +83,7 @@ export const Content = styled.div<{ isMobile?: boolean }>`
     font-size: 18px;
     line-height: 1.5;
     margin-bottom: 0.2em;
+    gap: 0.2em;
 
     code {
       color: var(--red800);
@@ -93,6 +94,16 @@ export const Content = styled.div<{ isMobile?: boolean }>`
       font-size: 14px;
       line-height: 1.5;
     }
+  }
+
+  blockquote {
+    background-color: var(--yellow50);
+    margin: 1em 0;
+    border-left: 4px solid var(--orange500);
+    padding: 12px 12px;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 0.2em;
   }
 
   pre {
