@@ -10,10 +10,12 @@ const PostContent = ({ postData }: P) => {
   //   Prism.highlightAll();
   // }, []);
 
+  const isMobile = useIsMobile();
+
   return (
     <Container>
-      <Title>{postData.title}</Title>
-      <Date>{postData.date} 에 작성됨</Date>
+      <Title isMobile={isMobile}>{postData.title}</Title>
+      <Date isMobile={isMobile}>{postData.date} 에 작성됨</Date>
       <Content dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
     </Container>
   );
@@ -23,24 +25,28 @@ export default PostContent;
 
 import styled from '@emotion/styled';
 import { FlexColumnBox, FlexEndBox } from 'src/styles/common';
+import { useIsMobile } from 'src/hooks/useIsMobile';
 
 export const Container = styled(FlexColumnBox)`
   gap: 12px;
 `;
 
-export const Title = styled.div`
-  font-size: 48px;
+export const Title = styled.div<{ isMobile?: boolean }>`
+  font-size: ${({ isMobile }) => (isMobile ? '40px' : '44px')};
   font-weight: 600;
 `;
-export const Date = styled(FlexEndBox)`
-  font-weight: 500;
-  font-size: 18px;
+export const Date = styled(FlexEndBox)<{ isMobile?: boolean }>`
+  font-weight: 400;
+  color: var(--grey700);
+  font-size: ${({ isMobile }) => (isMobile ? '14px' : '18px')};
+  margin-bottom: 80px;
 `;
 
 export const Content = styled.div`
   display: flex;
   gap: 12px;
   flex-direction: column;
+  width: 100%;
   height: 100%;
   overflow-y: scroll;
   font-size: 18px;
