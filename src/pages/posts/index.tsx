@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
-import Posts from 'src/components/blocks/posts';
+import Posts from 'src/components/blocks/PostList/posts';
+
 import Layout from 'src/components/layout/layout';
 import { getPostsData } from 'src/modules';
 
@@ -13,10 +14,6 @@ const PostPage = ({ allPostsData }: P) => {
 
 export default PostPage;
 
-PostPage.getLayout = function getLayout(page: ReactElement) {
-  return <Layout>{page}</Layout>;
-};
-
 export async function getStaticProps() {
   const allPostsData = getPostsData();
   return {
@@ -25,3 +22,7 @@ export async function getStaticProps() {
     },
   };
 }
+
+PostPage.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
+};

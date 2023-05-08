@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import PostContent from 'src/components/blocks/post';
+import PostContent from 'src/components/blocks/Content';
 import Layout from 'src/components/layout/layout';
 import { getAllPostIds, getPostData } from 'src/modules';
 
@@ -12,10 +12,6 @@ const ContentPage = ({ postData }: P) => {
 };
 
 export default ContentPage;
-
-ContentPage.getLayout = function getLayout(page: ReactElement) {
-  return <Layout>{page}</Layout>;
-};
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
@@ -33,3 +29,7 @@ export async function getStaticProps({ params }) {
     },
   };
 }
+
+ContentPage.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
+};

@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@types/react-responsive": "^8.0.5",

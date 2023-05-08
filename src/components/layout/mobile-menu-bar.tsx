@@ -3,6 +3,7 @@ interface P {}
 const MobileMenuBar = ({}: P) => {
   return (
     <Container>
+      <MenuItem href={`/posts`}>All</MenuItem>
       <MenuItem href={`/posts?category=client`}>Client</MenuItem>
       <MenuItem href={`/posts?category=client`}>Server</MenuItem>
       <MenuItem href={`/posts?category=client`}>Data Base</MenuItem>
@@ -22,17 +23,19 @@ import { FlexBox } from 'src/styles/common';
 export const Container = styled(FlexBox)`
   width: 100%;
   overflow-x: scroll;
-  padding-top: 70px;
+  margin-top: 70px;
   gap: 8px;
   position: fixed;
   background-color: white;
   z-index: 40;
+  padding: 12px 24px;
 `;
 
 export const MenuItem = styled(Link)`
   text-decoration: none;
   background-color: var(--grey100);
   color: black;
+  font-weight: 500;
   display: flex;
   box-sizing: border-box;
   padding: 6px 12px;

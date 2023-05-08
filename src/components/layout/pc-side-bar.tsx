@@ -1,3 +1,6 @@
+import styled from '@emotion/styled';
+import Link from 'next/link';
+import { FlexColumnBox } from 'src/styles/common';
 interface P {}
 
 const SideBar = ({}: P) => {
@@ -5,21 +8,17 @@ const SideBar = ({}: P) => {
     <Container>
       <MenuGroup href={`/about`}>About</MenuGroup>
       <MenuGroup href={`/posts`}>Posts</MenuGroup>
-      <MenuItem href={`/posts?category=client`}>{'> '}Client</MenuItem>
-      <MenuItem href={`/posts?category=client`}>{'> '}Server</MenuItem>
-      <MenuItem href={`/posts?category=client`}>{'> '}Data Base</MenuItem>
-      <MenuItem href={`/posts?category=client`}>{'> '}Algorithm</MenuItem>
-      <MenuItem href={`/posts?category=client`}>{'> '}Memoir</MenuItem>
-      <MenuItem href={`/posts?category=client`}>{'> '}and others ...</MenuItem>
+      <MenuItem href={`/posts?category=client`}>Client</MenuItem>
+      <MenuItem href={`/posts?category=client`}>Server</MenuItem>
+      <MenuItem href={`/posts?category=client`}>Data Base</MenuItem>
+      <MenuItem href={`/posts?category=client`}>Algorithm</MenuItem>
+      <MenuItem href={`/posts?category=client`}>Memoir</MenuItem>
+      <MenuItem href={`/posts?category=client`}>and others ...</MenuItem>
     </Container>
   );
 };
 
 export default SideBar;
-
-import styled from '@emotion/styled';
-import Link from 'next/link';
-import { FlexColumnBox } from 'src/styles/common';
 
 export const Container = styled(FlexColumnBox)`
   width: 200px;

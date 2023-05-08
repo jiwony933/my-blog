@@ -3,9 +3,14 @@ interface P {
 }
 
 const PostCard = ({ post }: P) => {
+  const router = useRouter();
+  const handleCardClick = () => {
+    router.push(`/posts/${post.id}`);
+  };
+
   return (
     <Container>
-      <CardWrapper href={`/posts/${post.id}`}>
+      <CardWrapper onClick={handleCardClick}>
         <Title>{post.title}</Title>
         <Summary>{post.summary}</Summary>
         <Date>{post.date} 작성</Date>
@@ -17,7 +22,7 @@ const PostCard = ({ post }: P) => {
 export default PostCard;
 
 import styled from '@emotion/styled';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { FlexColumnBox } from 'src/styles/common';
 
 export const Container = styled(FlexColumnBox)`
@@ -27,7 +32,7 @@ export const Container = styled(FlexColumnBox)`
   border-bottom: 1px solid var(--grey400);
 `;
 
-export const CardWrapper = styled(Link)`
+export const CardWrapper = styled(FlexColumnBox)`
   text-decoration: none;
   color: black;
   display: flex;

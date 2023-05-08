@@ -21,5 +21,6 @@ export const Container = styled(FlexBox)`
   background-color: white;
   padding: 12px;
   width: 100%;
+  height: 70px;
   max-width: var(--MAX_WIDTH);
 `;
