@@ -6,11 +6,15 @@ interface P {
 }
 
 const Layout = ({ children }: P) => {
+  const isPcOrTablet = useMediaQuery({ minDeviceWidth: 768 });
+  const isMobile = useMediaQuery({ maxDeviceWidth: 767 });
+
   return (
     <Container>
       <TopNav />
-      <SideBar />
-      <ContentWrapper>{children}</ContentWrapper>
+      {isPcOrTablet && <SideBar />}
+      {isMobile && <MobileMenuBar />}
+      <ContentWrapper isMobile={isMobile}>{children}</ContentWrapper>
     </Container>
   );
 };
@@ -18,7 +22,9 @@ const Layout = ({ children }: P) => {
 export default Layout;
 
 import styled from '@emotion/styled';
-import SideBar from './side-bar';
+import SideBar from './pc-side-bar';
+import { useMediaQuery } from 'react-responsive';
+import MobileMenuBar from './mobile-menu-bar';
 
 export const Container = styled(FlexColumnBox)`
   width: 100%;
@@ -31,12 +37,16 @@ export const Container = styled(FlexColumnBox)`
   background: white;
   margin: 0 auto;
   position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
   overflow-y: scroll;
 `;
 
-export const ContentWrapper = styled(FlexColumnBox)`
+export const ContentWrapper = styled(FlexColumnBox)<{ isMobile?: boolean }>`
   position: absolute;
-  padding: 50px 50px 100px 240px;
+  padding: ${({ isMobile }) =>
+    isMobile ? '30px 50px 100px 50px' : '30px 50px 100px 240px'};
   width: 100%;
   max-width: var(--MAX_WIDTH);
   margin-top: 70px;

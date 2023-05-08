@@ -1,6 +1,6 @@
 import type { NextSeoProps } from 'next-seo';
 
-export const DEFAULT_OG_IMAGE = 'https://images.homing.haus/TRDSTAppIcon.png';
+export const DEFAULT_OG_IMAGE = '';
 export const DEFAULT_DESCRIPTION = '프론트엔드 개발자 김지원';
 export const DEFAULT_KEYWORDS = 'ㅇㅇㅇ';
 
@@ -12,7 +12,7 @@ export const NEXT_SEO_DEFAULT: NextSeoProps = {
   openGraph: {
     type: 'website',
     locale: 'ko_KR',
-    // url: 'https://trdst.com',
+    url: 'https://my-blog-iota-beige.vercel.app',
     title: 'jiwonyyy blog',
     description: DEFAULT_DESCRIPTION,
     images: [
