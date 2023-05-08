@@ -42,14 +42,15 @@ export const Date = styled(FlexEndBox)<{ isMobile?: boolean }>`
   margin-bottom: 80px;
 `;
 
-export const Content = styled.div`
+export const Content = styled.div<{ isMobile?: boolean }>`
   display: flex;
-  gap: 12px;
   flex-direction: column;
+  gap: 1.2em;
   width: 100%;
-  height: 100%;
   overflow-y: scroll;
-  font-size: 18px;
+  line-height: 1.5;
+  font-size: ${({ isMobile }) => (isMobile ? '16px' : '18px')};
+  word-wrap: break-word;
 
   h1 {
     font-size: 40px;
@@ -77,18 +78,31 @@ export const Content = styled.div`
 
   p,
   li {
+    max-width: 100%;
     font-size: 18px;
     line-height: 1.5;
     margin-bottom: 0.2em;
   }
 
   pre {
-    background-color: #f5f5f5;
+    background-color: var(--blue50);
     padding: 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 0.2em;
+    overflow-x: scroll;
+
+    code {
+      font-size: 14px;
+      line-height: 1.5;
+    }
   }
 
   ol,
   ul {
+    margin-left: 0;
+    padding-left: 1.5em;
   }
 
   li {
