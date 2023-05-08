@@ -29,6 +29,7 @@ import { useIsMobile } from 'src/hooks/useIsMobile';
 
 export const Container = styled(FlexColumnBox)`
   gap: 12px;
+  padding-bottom: 200px;
 `;
 
 export const Title = styled.div<{ isMobile?: boolean }>`
@@ -82,10 +83,20 @@ export const Content = styled.div<{ isMobile?: boolean }>`
     font-size: 18px;
     line-height: 1.5;
     margin-bottom: 0.2em;
+
+    code {
+      color: var(--red800);
+      font-weight: 500;
+      background-color: var(--grey100);
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
   }
 
   pre {
-    background-color: var(--blue50);
+    background-color: var(--orange50);
     padding: 12px;
     border-radius: 4px;
     font-size: 14px;
@@ -109,7 +120,7 @@ export const Content = styled.div<{ isMobile?: boolean }>`
     list-style-type: disc;
 
     ::marker {
-      color: var(--blue500);
+      color: var(--grey800);
     }
   }
 `;
