@@ -28,17 +28,16 @@ export const Container = styled(FlexColumnBox)`
   @supports (-webkit-touch-callout: none) {
     min-height: -webkit-fill-available;
   }
-  /* min-height: calc(var(--vh, 1vh) * 100); */
   background: white;
   margin: 0 auto;
+  position: fixed;
+  overflow-y: scroll;
 `;
 
 export const ContentWrapper = styled(FlexColumnBox)`
   position: absolute;
-  padding-left: 240px;
+  padding: 50px 50px 100px 240px;
   width: 100%;
   max-width: var(--MAX_WIDTH);
-  /* background-color: blue; */
   margin-top: 70px;
-  /* width: auto; */
 `;

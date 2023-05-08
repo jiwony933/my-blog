@@ -26,7 +26,7 @@ export const Container = styled(FlexColumnBox)`
   padding-top: 70px;
   height: 100vh;
   gap: 4px;
-  position: sticky;
+  position: fixed;
   background-color: white;
   z-index: 40;
 `;
