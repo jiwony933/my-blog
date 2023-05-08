@@ -6,14 +6,11 @@ interface P {
 }
 
 const Layout = ({ children }: P) => {
-  // const isPcOrTablet = useMediaQuery({ minDeviceWidth: 768 });
-  // const isMobile = useMediaQuery({ maxDeviceWidth: 767, maxWidth: 767 });
   const isMobile = useIsMobile();
 
   return (
     <Container>
       <TopNav />
-
       {isMobile ? <MobileMenuBar /> : <SideBar />}
       <ContentWrapper isMobile={isMobile}>{children}</ContentWrapper>
     </Container>
@@ -28,7 +25,7 @@ import MobileMenuBar from './mobile-menu-bar';
 import { useIsMobile } from 'src/hooks/useIsMobile';
 
 export const Container = styled(FlexColumnBox)<{ isMobile?: boolean }>`
-  width: ${({ isMobile }) => (isMobile ? '100%' : `var(--MAX_WIDTH)`)};
+  max-width: ${({ isMobile }) => (isMobile ? '100%' : `var(--MAX_WIDTH)`)};
   position: relative;
   min-height: -webkit-fill-available;
   @supports (-webkit-touch-callout: none) {
@@ -48,7 +45,7 @@ export const ContentWrapper = styled(FlexColumnBox)<{ isMobile?: boolean }>`
   padding: ${({ isMobile }) =>
     isMobile ? '70px 50px 100px 50px' : '30px 50px 100px 240px'};
   width: 100%;
-  min-width: ${({ isMobile }) => (isMobile ? '500px' : `var(--MIN_WIDTH)`)};
-  max-width: ${({ isMobile }) => (isMobile ? '700px' : `var(--MAX_WIDTH)`)};
+  /* min-width: ${({ isMobile }) => (isMobile ? '500px' : `var(--MIN_WIDTH)`)};
+  max-width: ${({ isMobile }) => (isMobile ? '700px' : `var(--MAX_WIDTH)`)}; */
   margin-top: 70px;
 `;

@@ -59,9 +59,9 @@ const global = css`
   dl,
   dt,
   dd,
-  ol,
+  /* ol,
   ul,
-  li,
+  li, */
   fieldset,
   form,
   label,

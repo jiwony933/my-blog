@@ -14,7 +14,7 @@ const PostPage = ({ allPostsData }: P) => {
 
 export default PostPage;
 
-export async function getStaticProps() {
+export async function getStaticProps(params: any) {
   const allPostsData = getPostsData();
   return {
     props: {

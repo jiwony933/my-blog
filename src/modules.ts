@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import { ParsedUrlQuery } from 'querystring';
 
 const postsDirectory = path.join(process.cwd(), 'src/posts');
 
@@ -18,7 +19,7 @@ export function getPostsData() {
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
     // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
+    const matterResult = matter(fileContents) as any;
 
     // Combine the data with the id
     return {
@@ -26,6 +27,7 @@ export function getPostsData() {
       ...matterResult.data,
     };
   });
+
   // Sort posts by date
   return allPostsData;
 }

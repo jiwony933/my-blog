@@ -1,8 +1,15 @@
+import { useEffect } from 'react';
+import Prism from 'prismjs';
+
 interface P {
   postData: Post;
 }
 
 const PostContent = ({ postData }: P) => {
+  // useEffect(() => {
+  //   Prism.highlightAll();
+  // }, []);
+
   return (
     <Container>
       <Title>{postData.title}</Title>
@@ -22,7 +29,7 @@ export const Container = styled(FlexColumnBox)`
 `;
 
 export const Title = styled.div`
-  font-size: 50px;
+  font-size: 48px;
   font-weight: 600;
 `;
 export const Date = styled(FlexEndBox)`
@@ -50,12 +57,12 @@ export const Content = styled.div`
     font-size: 24px;
   }
 
-  h3 {
+  h4 {
     font-size: 18px;
   }
 
-  h4 {
-    font-size: 18px;
+  h5 {
+    font-size: 16px;
   }
 
   img {
@@ -65,6 +72,8 @@ export const Content = styled.div`
   p,
   li {
     font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 0.2em;
   }
 
   pre {
@@ -72,9 +81,15 @@ export const Content = styled.div`
     padding: 12px;
   }
 
-  ol {
+  ol,
+  ul {
   }
 
   li {
+    list-style-type: disc;
+
+    ::marker {
+      color: var(--blue500);
+    }
   }
 `;

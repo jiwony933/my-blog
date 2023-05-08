@@ -5,7 +5,7 @@ interface P {}
 
 const Logo = ({}: P) => {
   return (
-    <Link href='/'>
+    <Link href='/posts'>
       <Image src='/logo.png' width={300} height={36} alt='지원 블로그' />
     </Link>
   );
