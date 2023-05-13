@@ -1,15 +1,22 @@
 interface P {}
 
 const MobileMenuBar = ({}: P) => {
+  const { focusedCategory, isFocused } = useGetCategory();
+
   return (
     <Container>
-      <MenuItem href={`/posts`}>All</MenuItem>
-      <MenuItem href={`/posts?category=client`}>Client</MenuItem>
-      <MenuItem href={`/posts?category=client`}>Server</MenuItem>
-      <MenuItem href={`/posts?category=client`}>Data Base</MenuItem>
-      <MenuItem href={`/posts?category=client`}>Algorithm</MenuItem>
-      <MenuItem href={`/posts?category=client`}>Memoir</MenuItem>
-      <MenuItem href={`/posts?category=client`}>and others ...</MenuItem>
+      <MenuItem href={`/posts`} focused={focusedCategory === undefined}>
+        All
+      </MenuItem>
+      {CATEGORIES.map((category) => (
+        <MenuItem
+          key={category}
+          href={`/posts?category=${category}`}
+          focused={isFocused(category)}
+        >
+          {category}
+        </MenuItem>
+      ))}
     </Container>
   );
 };
@@ -18,6 +25,8 @@ export default MobileMenuBar;
 
 import styled from '@emotion/styled';
 import Link from 'next/link';
+import { CATEGORIES } from 'src/constants/categories';
+import { useGetCategory } from 'src/hooks/useFocusedCategory';
 import { FlexBox } from 'src/styles/common';
 
 export const Container = styled(FlexBox)`
@@ -31,9 +40,10 @@ export const Container = styled(FlexBox)`
   padding: 12px 24px;
 `;
 
-export const MenuItem = styled(Link)`
+export const MenuItem = styled(Link)<{ focused?: boolean }>`
   text-decoration: none;
-  background-color: var(--grey100);
+  background-color: ${({ focused }) =>
+    focused ? 'var(--blue100)' : 'var(--grey100)'};
   color: black;
   font-weight: 500;
   display: flex;

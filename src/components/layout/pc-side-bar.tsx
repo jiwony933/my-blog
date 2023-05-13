@@ -1,16 +1,24 @@
 interface P {}
 
 const SideBar = ({}: P) => {
+  const { focusedCategory, isFocused } = useGetCategory();
+
   return (
     <Container>
       {/* <MenuGroup href={`/about`}>About</MenuGroup> */}
-      <MenuGroup href={`/posts`}>Posts</MenuGroup>
-      <MenuItem href={`/posts?category=client`}>{'> '}Client</MenuItem>
-      <MenuItem href={`/posts?category=client`}>{'> '}Server</MenuItem>
-      <MenuItem href={`/posts?category=client`}>{'> '}Data Base</MenuItem>
-      <MenuItem href={`/posts?category=client`}>{'> '}Algorithm</MenuItem>
-      <MenuItem href={`/posts?category=client`}>{'> '}Memoir</MenuItem>
-      <MenuItem href={`/posts?category=client`}>{'> '}and others ...</MenuItem>
+      <MenuGroup href={`/posts`} focused={focusedCategory === undefined}>
+        Posts
+      </MenuGroup>
+      {CATEGORIES.map((category) => (
+        <MenuItem
+          key={category}
+          href={`/posts?category=${category}`}
+          focused={isFocused(category)}
+        >
+          {'> '}
+          {category}
+        </MenuItem>
+      ))}
     </Container>
   );
 };
@@ -19,6 +27,8 @@ export default SideBar;
 
 import styled from '@emotion/styled';
 import Link from 'next/link';
+import { CATEGORIES } from 'src/constants/categories';
+import { useGetCategory } from 'src/hooks/useFocusedCategory';
 import { FlexColumnBox } from 'src/styles/common';
 
 export const Container = styled(FlexColumnBox)`
@@ -31,11 +41,12 @@ export const Container = styled(FlexColumnBox)`
   z-index: 40;
 `;
 
-export const MenuGroup = styled(Link)`
+export const MenuGroup = styled(Link)<{ focused?: boolean }>`
   text-decoration: none;
   color: black;
   padding: 6px;
   cursor: pointer;
+  background-color: ${({ focused }) => (focused ? 'var(--blue100)' : 'white')};
   width: 100%;
 
   :hover {
@@ -44,14 +55,14 @@ export const MenuGroup = styled(Link)`
   }
 `;
 
-export const MenuItem = styled(Link)`
+export const MenuItem = styled(MenuGroup)`
   text-decoration: none;
   color: black;
   display: flex;
   box-sizing: border-box;
   padding: 6px 12px;
   cursor: pointer;
-  background-color: white;
+
   white-space: nowrap;
   width: 100%;
 

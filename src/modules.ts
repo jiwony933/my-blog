@@ -3,11 +3,10 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
-import { ParsedUrlQuery } from 'querystring';
 
 const postsDirectory = path.join(process.cwd(), 'src/posts');
 
-export function getPostsData() {
+export async function getPostsData(params?: string) {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
@@ -28,8 +27,9 @@ export function getPostsData() {
     };
   });
 
-  // Sort posts by date
-  return allPostsData;
+  return params
+    ? allPostsData.filter((post) => post.category === params)
+    : allPostsData;
 }
 
 export function getAllPostIds() {
