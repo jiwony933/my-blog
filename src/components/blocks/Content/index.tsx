@@ -28,9 +28,11 @@ import styled from '@emotion/styled';
 import { FlexColumnBox, FlexEndBox } from 'src/styles/common';
 import { useIsMobile } from 'src/hooks/useIsMobile';
 
-export const Container = styled(FlexColumnBox)`
+export const Container = styled(FlexColumnBox)<{ isMobile?: boolean }>`
   gap: 12px;
   padding-bottom: 200px;
+  padding-left: ${({ isMobile }) => (isMobile ? '0px' : '40px')};
+  padding-right: ${({ isMobile }) => (isMobile ? '0px' : '100px')};
 `;
 
 export const Title = styled.div<{ isMobile?: boolean }>`
@@ -81,7 +83,7 @@ export const Content = styled.div<{ isMobile?: boolean }>`
   p,
   li {
     max-width: 100%;
-    font-size: 18px;
+    font-size: ${({ isMobile }) => (isMobile ? '13px' : '15px')};
     line-height: 1.5;
     margin-bottom: 0.2em;
     gap: 0.2em;
@@ -98,17 +100,20 @@ export const Content = styled.div<{ isMobile?: boolean }>`
   }
 
   blockquote {
-    background-color: var(--yellow50);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    background-color: var(--grey100);
     margin: 1em 0;
-    border-left: 4px solid var(--orange500);
-    padding: 12px 12px;
+    border-left: 4px solid var(--blue800);
+    padding: 12px 18px;
     font-size: 18px;
     line-height: 1.5;
     margin-bottom: 0.2em;
   }
 
   pre {
-    background-color: var(--orange50);
+    background-color: var(--blue50);
     padding: 12px;
     border-radius: 4px;
     font-size: 14px;
