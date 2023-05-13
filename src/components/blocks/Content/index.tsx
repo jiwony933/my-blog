@@ -33,7 +33,7 @@ export const Container = styled(FlexColumnBox)`
 `;
 
 export const Title = styled.div<{ isMobile?: boolean }>`
-  font-size: ${({ isMobile }) => (isMobile ? '40px' : '44px')};
+  font-size: ${({ isMobile }) => (isMobile ? '32px' : '44px')};
   font-weight: 600;
 `;
 export const Date = styled(FlexEndBox)<{ isMobile?: boolean }>`
@@ -50,7 +50,7 @@ export const Content = styled.div<{ isMobile?: boolean }>`
   width: 100%;
   overflow-y: scroll;
   line-height: 1.5;
-  font-size: ${({ isMobile }) => (isMobile ? '16px' : '18px')};
+  font-size: ${({ isMobile }) => (isMobile ? '12px' : '14px')};
   word-wrap: break-word;
 
   h1 {
