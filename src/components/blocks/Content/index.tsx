@@ -1,14 +1,15 @@
 import { useEffect } from 'react';
 import Prism from 'prismjs';
+import 'prismjs/themes/prism-okaidia.css';
 
 interface P {
   postData: Post;
 }
 
 const PostContent = ({ postData }: P) => {
-  // useEffect(() => {
-  //   Prism.highlightAll();
-  // }, []);
+  useEffect(() => {
+    Prism.highlightAll();
+  }, [postData]);
 
   const isMobile = useIsMobile();
 
