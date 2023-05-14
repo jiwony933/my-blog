@@ -1,7 +1,9 @@
-interface P {}
+interface P {
+  focusedCategory?: string;
+}
 
-const MobileMenuBar = ({}: P) => {
-  const { focusedCategory, isFocused } = useGetCategory();
+const MobileMenuBar = ({ focusedCategory }: P) => {
+  console.log(focusedCategory);
 
   return (
     <Container>
@@ -12,7 +14,7 @@ const MobileMenuBar = ({}: P) => {
         <MenuItem
           key={category}
           href={`/posts?category=${category}`}
-          focused={isFocused(category)}
+          focused={focusedCategory === category}
         >
           {category}
         </MenuItem>
@@ -26,7 +28,6 @@ export default MobileMenuBar;
 import styled from '@emotion/styled';
 import Link from 'next/link';
 import { CATEGORIES } from 'src/constants/categories';
-import { useGetCategory } from 'src/hooks/useFocusedCategory';
 import { FlexBox } from 'src/styles/common';
 
 export const Container = styled(FlexBox)`

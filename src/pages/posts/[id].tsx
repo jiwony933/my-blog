@@ -1,3 +1,4 @@
+import { GetServerSideProps } from 'next';
 import { ReactElement } from 'react';
 import PostContent from 'src/components/blocks/Content';
 import Layout from 'src/components/layout/layout';

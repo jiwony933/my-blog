@@ -2,16 +2,21 @@ import { FlexColumnBox } from 'src/styles/common';
 import TopNav from './top-nav';
 
 interface P {
-  children: JSX.Element;
+  focusedCategory?: string;
+  children: ReactNode;
 }
 
-const Layout = ({ children }: P) => {
+const Layout = ({ focusedCategory, children }: P) => {
   const isMobile = useIsMobile();
 
   return (
     <Container>
       <TopNav />
-      {isMobile ? <MobileMenuBar /> : <SideBar />}
+      {isMobile ? (
+        <MobileMenuBar focusedCategory={focusedCategory} />
+      ) : (
+        <SideBar focusedCategory={focusedCategory} />
+      )}
       <ContentWrapper isMobile={isMobile}>{children}</ContentWrapper>
     </Container>
   );
@@ -23,6 +28,7 @@ import styled from '@emotion/styled';
 import SideBar from './pc-side-bar';
 import MobileMenuBar from './mobile-menu-bar';
 import { useIsMobile } from 'src/hooks/useIsMobile';
+import { ReactNode } from 'react';
 
 export const Container = styled(FlexColumnBox)<{ isMobile?: boolean }>`
   max-width: ${({ isMobile }) =>

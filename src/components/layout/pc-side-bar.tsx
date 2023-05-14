@@ -1,8 +1,8 @@
-interface P {}
+interface P {
+  focusedCategory?: string;
+}
 
-const SideBar = ({}: P) => {
-  const { focusedCategory, isFocused } = useGetCategory();
-
+const SideBar = ({ focusedCategory }: P) => {
   return (
     <Container>
       {/* <MenuGroup href={`/about`}>About</MenuGroup> */}
@@ -13,7 +13,7 @@ const SideBar = ({}: P) => {
         <MenuItem
           key={category}
           href={`/posts?category=${category}`}
-          focused={isFocused(category)}
+          focused={focusedCategory === category}
         >
           {'> '}
           {category}
@@ -28,7 +28,6 @@ export default SideBar;
 import styled from '@emotion/styled';
 import Link from 'next/link';
 import { CATEGORIES } from 'src/constants/categories';
-import { useGetCategory } from 'src/hooks/useFocusedCategory';
 import { FlexColumnBox } from 'src/styles/common';
 
 export const Container = styled(FlexColumnBox)`
