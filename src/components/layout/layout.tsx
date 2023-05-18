@@ -11,7 +11,7 @@ const Layout = ({ focusedCategory, children }: P) => {
 
   return (
     <Container>
-      <TopNav />
+      {<TopNav />}
       {isMobile ? (
         <MobileMenuBar focusedCategory={focusedCategory} />
       ) : (
@@ -28,11 +28,11 @@ import styled from '@emotion/styled';
 import SideBar from './pc-side-bar';
 import MobileMenuBar from './mobile-menu-bar';
 import { useIsMobile } from 'src/hooks/useIsMobile';
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 
 export const Container = styled(FlexColumnBox)<{ isMobile?: boolean }>`
   max-width: ${({ isMobile }) =>
-    isMobile ? 'calc(100vw-700px)' : `var(--MAX_WIDTH)`};
+    isMobile ? 'calc(100vw-300px)' : `var(--MAX_WIDTH)`};
   position: relative;
   min-height: -webkit-fill-available;
   @supports (-webkit-touch-callout: none) {
@@ -49,9 +49,9 @@ export const Container = styled(FlexColumnBox)<{ isMobile?: boolean }>`
 
 export const ContentWrapper = styled(FlexColumnBox)<{ isMobile?: boolean }>`
   position: absolute;
-  max-width: ${({ isMobile }) => (isMobile ? '100%' : 'calc(100vw - 70px)')};
+  max-width: ${({ isMobile }) => (isMobile ? '100%' : 'calc(100vw - 30px)')};
   padding: ${({ isMobile }) =>
-    isMobile ? '70px 20px 100px 20px' : '30px 50px 100px 240px'};
+    isMobile ? '70px 0px 20px 20px' : '30px 30px 100px 240px'};
   width: 100%;
   margin-top: 70px;
 `;

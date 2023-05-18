@@ -7,9 +7,7 @@ const MobileMenuBar = ({ focusedCategory }: P) => {
 
   return (
     <Container>
-      <MenuItem href={`/posts`} focused={isEmptyString(focusedCategory)}>
-        All
-      </MenuItem>
+      <MenuItem href={`/posts`}>All</MenuItem>
       {CATEGORIES.map((category) => (
         <MenuItem
           key={category}

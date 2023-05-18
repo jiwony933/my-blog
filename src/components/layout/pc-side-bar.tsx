@@ -6,9 +6,7 @@ const SideBar = ({ focusedCategory }: P) => {
   console.log(focusedCategory);
   return (
     <Container>
-      {/* <MenuGroup href={`/posts`} focused={isEmptyString(focusedCategory)}>
-        Posts
-      </MenuGroup> */}
+      <MenuGroup href={`/posts`}>Posts</MenuGroup>
       {CATEGORIES.map((category) => (
         <MenuItem
           key={category}
@@ -29,7 +27,6 @@ import styled from '@emotion/styled';
 import Link from 'next/link';
 import { CATEGORIES } from 'src/constants/categories';
 import { FlexColumnBox } from 'src/styles/common';
-import { isEmptyString } from 'src/utils/common';
 
 export const Container = styled(FlexColumnBox)`
   width: 200px;
@@ -39,6 +36,7 @@ export const Container = styled(FlexColumnBox)`
   position: fixed;
   background-color: white;
   z-index: 40;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 `;
 
 export const MenuGroup = styled(Link)<{ focused?: boolean }>`

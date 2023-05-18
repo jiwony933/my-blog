@@ -6,5 +6,5 @@ interface PostSummary {
 }
 
 interface Post extends PostSummary {
-  contentHtml: string;
+  content: string;
 }
