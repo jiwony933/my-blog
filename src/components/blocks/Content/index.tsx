@@ -7,13 +7,11 @@ interface P {
 const PostContent = ({ postData }: P) => {
   const isMobile = useIsMobile();
 
-  const sample = '### 느낀 점';
-
   return (
     <Container>
       <Title isMobile={isMobile}>{postData.title}</Title>
       <Date isMobile={isMobile}>{postData.date} 에 작성됨</Date>
-      <MarkdownViewer content={sample} />
+      <MarkdownViewer content={postData.content} />
     </Container>
   );
 };

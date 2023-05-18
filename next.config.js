@@ -6,7 +6,7 @@ const withPlugins = require('next-compose-plugins');
 
 module.exports = withPlugins([withTM], {
   images: {
-    domains: ['localhost', 'ghchart.rshah.org'],
+    domains: ['localhost', 'ghchart.rshah.org', 'velog.velcdn.com'],
   },
   reactStrictMode: false,
   pageExtensions: ['tsx'],
