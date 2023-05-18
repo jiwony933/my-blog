@@ -1,8 +1,10 @@
-export const CATEGORIES = [
-  'client',
-  'server',
-  'database',
-  'algorithm',
-  'memoir',
-  'etc',
-];
+export const CategoriesMap = {
+  클라이언트: 'client',
+  서버: 'server',
+  데이터베이스: 'database',
+  알고리즘: 'algorithm',
+  회고록: 'memoir',
+  기타: 'etc',
+};
+
+export const CATEGORIES = Object.values(CategoriesMap);

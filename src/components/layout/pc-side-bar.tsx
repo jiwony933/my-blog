@@ -3,11 +3,12 @@ interface P {
 }
 
 const SideBar = ({ focusedCategory }: P) => {
+  console.log(focusedCategory);
   return (
     <Container>
-      <MenuGroup href={`/posts`} focused={isEmptyString(focusedCategory)}>
+      {/* <MenuGroup href={`/posts`} focused={isEmptyString(focusedCategory)}>
         Posts
-      </MenuGroup>
+      </MenuGroup> */}
       {CATEGORIES.map((category) => (
         <MenuItem
           key={category}

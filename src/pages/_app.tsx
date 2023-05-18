@@ -1,4 +1,3 @@
-import { NextPage } from 'next';
 import Head from 'next/head';
 import global from '../styles/global';
 import '../styles/variable.css';
@@ -16,7 +15,6 @@ function MyApp({ Component, pageProps }) {
           name='viewport'
           content='initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width'
         />
-        지원 블로그
       </Head>
       <Script />
       <DefaultSeo />

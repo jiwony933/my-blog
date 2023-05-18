@@ -27,15 +27,14 @@ const global = css`
   h5,
   h6,
   p,
-  blockquote,
-  pre,
+  /* blockquote,
+  pre, */
   a,
   abbr,
   acronym,
   address,
   big,
   cite,
-  code,
   del,
   dfn,
   em,
@@ -120,10 +119,10 @@ const global = css`
   li {
     list-style: none;
   }
-  blockquote,
+  /* blockquote,
   q {
     quotes: none;
-  }
+  } */
   blockquote:before,
   blockquote:after,
   q:before,
