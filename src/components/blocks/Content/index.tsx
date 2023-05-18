@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import Prism from 'prismjs';
+import marked from 'marked';
 import 'prismjs/themes/prism-okaidia.css';
 
 interface P {
@@ -7,34 +8,17 @@ interface P {
 }
 
 const PostContent = ({ postData }: P) => {
-  useEffect(() => {
-    const contentNode = document.querySelector('.content');
-
-    if (contentNode) {
-      const observer = new MutationObserver(() => {
-        // DOM 변화를 감지했을 때 Prism.js 호출
-        Prism.highlightAll();
-        observer.disconnect();
-      });
-
-      // `Content` 컴포넌트를 관찰 시작
-      observer.observe(contentNode, { childList: true });
-
-      // 컴포넌트 unmount 시 관찰 중지
-      return () => observer.disconnect();
-    }
-  }, [postData]);
-
   const isMobile = useIsMobile();
 
   return (
     <Container>
       <Title isMobile={isMobile}>{postData.title}</Title>
       <Date isMobile={isMobile}>{postData.date} 에 작성됨</Date>
-      <Content
+
+      {/* <Content
         className='content'
         dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-      />
+      /> */}
     </Container>
   );
 };
