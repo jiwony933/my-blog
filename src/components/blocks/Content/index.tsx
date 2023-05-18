@@ -2,11 +2,10 @@ import 'prismjs/themes/prism-okaidia.css';
 
 interface P {
   postData: Post;
+  isMobile: boolean;
 }
 
-const PostContent = ({ postData }: P) => {
-  const isMobile = useIsMobile();
-
+const PostContent = ({ postData, isMobile }: P) => {
   return (
     <Container className='post-content'>
       <Title isMobile={isMobile}>{postData.title}</Title>
@@ -20,7 +19,6 @@ export default PostContent;
 
 import styled from '@emotion/styled';
 import { FlexColumnBox, FlexEndBox } from 'src/styles/common';
-import { useIsMobile } from 'src/hooks/useIsMobile';
 import MarkdownViewer from './MarkDownViewer';
 
 export const Container = styled(FlexColumnBox)<{ isMobile?: boolean }>`

@@ -10,9 +10,10 @@ import PageSeo from 'src/seo/PageSeo';
 interface P {
   category?: string;
   allPostsData: any;
+  isMobile: boolean;
 }
 
-const PostPage = ({ category, allPostsData }: P) => {
+const PostPage = ({ isMobile, category, allPostsData }: P) => {
   const seoData = {
     title: `${category} posts`,
     description: `${category} 관련 포스팅을 확인하실 수 있습니다.`,
@@ -20,7 +21,7 @@ const PostPage = ({ category, allPostsData }: P) => {
   };
 
   return (
-    <Layout focusedCategory={category}>
+    <Layout isMobile={isMobile} focusedCategory={category}>
       <PageSeo {...seoData} />
       {isEmptyArray(allPostsData) ? <NoPost /> : <Posts posts={allPostsData} />}
     </Layout>

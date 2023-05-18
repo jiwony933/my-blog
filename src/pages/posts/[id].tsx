@@ -5,11 +5,16 @@ import Layout from 'src/components/layout/layout';
 import { getAllPostIds, getPostData } from 'src/modules';
 
 interface P {
-  postData: any;
+  postData: Post;
+  isMobile: boolean;
 }
 
-const ContentPage = ({ postData }: P) => {
-  return <PostContent postData={postData} />;
+const ContentPage = ({ isMobile, postData }: P) => {
+  return (
+    <Layout isMobile={isMobile}>
+      <PostContent isMobile={isMobile} postData={postData} />
+    </Layout>
+  );
 };
 
 export default ContentPage;
@@ -31,6 +36,9 @@ export async function getStaticProps({ params }) {
   };
 }
 
-ContentPage.getLayout = function getLayout(page: ReactElement) {
-  return <Layout>{page}</Layout>;
-};
+// ContentPage.getLayout = function getLayout(
+//   page: ReactElement,
+//   isMobile: boolean
+// ) {
+//   return <Layout isMobile={isMobile}>{page}</Layout>;
+// };

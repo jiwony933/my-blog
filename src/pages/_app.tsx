@@ -5,9 +5,14 @@ import Script from 'next/script';
 import DefaultSeo from 'src/seo/DefaultSeo';
 import { Global } from '@emotion/react';
 import App, { AppContext } from 'next/app';
+import { useIsMobile } from 'src/hooks/useIsMobile';
 
 function MyApp({ Component, pageProps }) {
-  const getLayout = Component.getLayout ?? ((page) => page);
+  const isMobile = useIsMobile();
+  const getMobileLayout = Component.getMobileLayout ?? ((page) => page);
+  const getPcLayout = Component.getPcLayout ?? ((page) => page);
+  const getLayout = isMobile ? getMobileLayout : getPcLayout;
+
   return (
     <>
       <Head>
@@ -19,7 +24,7 @@ function MyApp({ Component, pageProps }) {
       <Script />
       <DefaultSeo />
       <Global styles={global} />
-      {getLayout(<Component {...pageProps} />)}
+      {getLayout(<Component isMobile={isMobile} {...pageProps} />)}
     </>
   );
 }

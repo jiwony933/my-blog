@@ -4,11 +4,10 @@ import TopNav from './top-nav';
 interface P {
   focusedCategory?: string;
   children: ReactNode;
+  isMobile: boolean;
 }
 
-const Layout = ({ focusedCategory, children }: P) => {
-  const isMobile = useIsMobile();
-
+const Layout = ({ focusedCategory, children, isMobile }: P) => {
   return (
     <Container className='layout'>
       {<TopNav />}
@@ -29,8 +28,7 @@ export default Layout;
 import styled from '@emotion/styled';
 import SideBar from './pc-side-bar';
 import MobileMenuBar from './mobile-menu-bar';
-import { useIsMobile } from 'src/hooks/useIsMobile';
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode } from 'react';
 
 export const Container = styled(FlexColumnBox)<{ isMobile?: boolean }>`
   max-width: ${({ isMobile }) => !isMobile && `var(--MAX_WIDTH)`};
