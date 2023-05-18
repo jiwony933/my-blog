@@ -8,7 +8,7 @@ const PostContent = ({ postData }: P) => {
   const isMobile = useIsMobile();
 
   return (
-    <Container>
+    <Container className='post-content'>
       <Title isMobile={isMobile}>{postData.title}</Title>
       <Date isMobile={isMobile}>{postData.date} 에 작성됨</Date>
       <MarkdownViewer content={postData.content} />
@@ -26,8 +26,8 @@ import MarkdownViewer from './MarkDownViewer';
 export const Container = styled(FlexColumnBox)<{ isMobile?: boolean }>`
   gap: 12px;
   padding-bottom: 200px;
-  padding-left: ${({ isMobile }) => (isMobile ? '0px' : '40px')};
-  padding-right: ${({ isMobile }) => (isMobile ? '0px' : '100px')};
+  padding-left: 50px;
+  padding-right: 50px;
 `;
 
 export const Title = styled.div<{ isMobile?: boolean }>`
