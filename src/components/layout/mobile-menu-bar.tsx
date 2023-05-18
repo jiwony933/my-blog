@@ -7,7 +7,7 @@ const MobileMenuBar = ({ focusedCategory }: P) => {
 
   return (
     <Container>
-      <MenuItem href={`/posts`} focused={focusedCategory === undefined}>
+      <MenuItem href={`/posts`} focused={isEmptyString(focusedCategory)}>
         All
       </MenuItem>
       {CATEGORIES.map((category) => (
@@ -29,6 +29,7 @@ import styled from '@emotion/styled';
 import Link from 'next/link';
 import { CATEGORIES } from 'src/constants/categories';
 import { FlexBox } from 'src/styles/common';
+import { isEmptyString } from 'src/utils/common';
 
 export const Container = styled(FlexBox)`
   width: 100%;
@@ -55,8 +56,8 @@ export const MenuItem = styled(Link)<{ focused?: boolean }>`
   width: 100%;
   border-radius: 12px;
 
-  :hover {
+  /* :hover {
     background-color: #f5f5f5;
     transition: all 0.4s;
-  }
+  } */
 `;

@@ -5,8 +5,7 @@ interface P {
 const SideBar = ({ focusedCategory }: P) => {
   return (
     <Container>
-      {/* <MenuGroup href={`/about`}>About</MenuGroup> */}
-      <MenuGroup href={`/posts`} focused={focusedCategory === undefined}>
+      <MenuGroup href={`/posts`} focused={isEmptyString(focusedCategory)}>
         Posts
       </MenuGroup>
       {CATEGORIES.map((category) => (
@@ -29,6 +28,7 @@ import styled from '@emotion/styled';
 import Link from 'next/link';
 import { CATEGORIES } from 'src/constants/categories';
 import { FlexColumnBox } from 'src/styles/common';
+import { isEmptyString } from 'src/utils/common';
 
 export const Container = styled(FlexColumnBox)`
   width: 200px;

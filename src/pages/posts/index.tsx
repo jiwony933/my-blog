@@ -1,7 +1,5 @@
 import { GetServerSideProps } from 'next';
-import { ReactElement } from 'react';
 import Posts from 'src/components/blocks/PostList/posts';
-
 import Layout from 'src/components/layout/layout';
 import { getPostsData } from 'src/modules';
 import NoPost from './no-post';
@@ -16,7 +14,6 @@ const PostPage = ({ category, allPostsData }: P) => {
   return (
     <Layout focusedCategory={category}>
       {isEmptyArray(allPostsData) ? <NoPost /> : <Posts posts={allPostsData} />}
-      <Posts posts={allPostsData} />
     </Layout>
   );
 };
