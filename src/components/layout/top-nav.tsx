@@ -14,7 +14,6 @@ const TopNav = ({}: P) => {
 export default TopNav;
 
 import styled from '@emotion/styled';
-
 export const Container = styled(FlexBox)`
   position: fixed;
   z-index: 100;
