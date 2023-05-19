@@ -2,14 +2,15 @@ import { FlexColumnBox } from 'src/styles/common';
 import PostCard from '../postCard';
 
 interface P {
-  posts: any[];
+  isMobile: boolean;
+  posts: PostSummary[];
 }
 
-const Posts = ({ posts }: P) => {
+const Posts = ({ posts, isMobile }: P) => {
   return (
     <FlexColumnBox>
       {posts.map((post) => (
-        <PostCard key={post.id} post={post} />
+        <PostCard key={post.id} post={post} isMobile={isMobile} />
       ))}
     </FlexColumnBox>
   );

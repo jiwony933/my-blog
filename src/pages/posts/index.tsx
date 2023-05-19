@@ -22,7 +22,11 @@ const PostPage = ({ isMobile, category, allPostsData }: P) => {
   return (
     <Layout isMobile={isMobile} focusedCategory={category}>
       <PageSeo {...seoData} />
-      {isEmptyArray(allPostsData) ? <NoPost /> : <Posts posts={allPostsData} />}
+      {isEmptyArray(allPostsData) ? (
+        <NoPost />
+      ) : (
+        <Posts isMobile={isMobile} posts={allPostsData} />
+      )}
     </Layout>
   );
 };

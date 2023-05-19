@@ -1,8 +1,9 @@
 interface P {
   post: PostSummary;
+  isMobile: boolean;
 }
 
-const PostCard = ({ post }: P) => {
+const PostCard = ({ post, isMobile }: P) => {
   const router = useRouter();
   const handleCardClick = () => {
     router.push(`/posts/${post.id}`);
@@ -11,9 +12,9 @@ const PostCard = ({ post }: P) => {
   return (
     <Container>
       <CardWrapper onClick={handleCardClick}>
-        <Title>{post.title}</Title>
-        <Summary>{post.summary}</Summary>
-        <Date>{post.date} 작성</Date>
+        <Title isMobile={isMobile}>{post.title}</Title>
+        <Summary isMobile={isMobile}>{post.summary}</Summary>
+        <Date>🖌️ {post.date}</Date>
       </CardWrapper>
     </Container>
   );
@@ -40,8 +41,12 @@ export const CardWrapper = styled(FlexColumnBox)`
   gap: 12px;
 `;
 
-export const Title = styled.div`
-  font-size: 24px;
+export const Title = styled.div<{ isMobile: boolean }>`
+  font-size: ${({ isMobile }) => (isMobile ? '18px' : '24px')};
+  word-break: break-all;
+  line-height: 1.4em;
+  font-weight: 500;
+
   :hover {
     text-decoration: underline;
     cursor: pointer;
@@ -49,15 +54,13 @@ export const Title = styled.div`
   }
 `;
 
-export const Summary = styled.div`
+export const Summary = styled.div<{ isMobile: boolean }>`
+  width: 100%;
   color: var(--grey700);
-  font-size: 16px;
+  font-size: ${({ isMobile }) => (isMobile ? '14px' : '16px')};
   line-height: 1.4em;
   cursor: pointer;
-
-  a {
-    word-break: break-all;
-  }
+  word-wrap: break-word;
 `;
 
 export const Date = styled.div`
