@@ -35,10 +35,3 @@ export async function getStaticProps({ params }) {
     },
   };
 }
-
-// ContentPage.getLayout = function getLayout(
-//   page: ReactElement,
-//   isMobile: boolean
-// ) {
-//   return <Layout isMobile={isMobile}>{page}</Layout>;
-// };

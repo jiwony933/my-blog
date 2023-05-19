@@ -1,8 +1,8 @@
 ---
-title: 'nestjs 이미지 파일 여러개 업로드 구현하기 '
-date: '2020-01-01'
-category: 'server'
-summary: '네스트로 이미지 파일 업로드 구현하기'
+title: 'nestjs 이미지 파일 여러개 업로드 구현하기'
+date: '2023-03-18'
+category: ''
+summary: '클라이언트에서 form-data로 보낸 이미지 파일들을 nestJs 서버에서 받는 방법을 알아보자.'
 ---
 
 클라이언트에서 form-data로 보낸 이미지 파일을 서버에서 받는 방법을 알아보자.
@@ -14,13 +14,13 @@ summary: '네스트로 이미지 파일 업로드 구현하기'
 > #### Form-data란?
 >
 > key-value쌍을 저장할 수 있는 객체이다.
-
-```js
-const formData = new FormData();
-formData.append('key', file);
-```
-
-위와 같이 폼데이터를 먼저 생성하고, append method를 사용하여 value를 추가할 수 있다.
+>
+> ```js
+> const formData = new FormData();
+> formData.append('key', file);
+> ```
+>
+> 위와 같이 폼데이터를 먼저 생성하고, append method를 사용하여 value를 추가할 수 있다.
 
 ```js
 const handleSubmitAdditionalImages = () => {
@@ -60,7 +60,7 @@ const uploadPvSubImages = async (params: useUploadPvSubImagesReqParams) => {
 ```
 
 - form-data 자체가 객체형태이기 때문에, axios 두번째 인자로 그냥 폼데이터 자체만 넣어주어도 되며,
-- ` 'Content-Type': 'multipart/form-data'`로 헤더를 지정해주어야 한다.
+- `'Content-Type': 'multipart/form-data'`로 헤더를 지정해주어야 한다.
 
 ## 서버 부분
 
@@ -106,7 +106,6 @@ export class UploadPvSubImagesAdminRequestDto {
   images: Express.Multer.File[];
 }
 
-
   @ApiBody({ type: UploadPvSubImagesAdminRequestDto })
   @ApiConsumes('multipart/form-data')
 // 이 end-point 가 multipart/form-data를 받는다는 것을 명시
@@ -124,6 +123,7 @@ export class UploadPvSubImagesAdminRequestDto {
 컨트롤러 코드를 작성하면서 헷갈린 부분이 많았는데 내가 헷갈렸던 포인트를 몇가지 적어보자면
 
 - 우선 `FileInterCeptor`라는 인터셉터를 만들어 주어야 한다.
+
   > ### FileInterCeptor?
   >
   > - `FileInterCeptor`는 multer 라이브러리를 nestJs에서 쉽게 사용할 수 있또록 도와주는 인터셉터이다.
@@ -148,7 +148,6 @@ export class UploadPvSubImagesAdminRequestDto {
 
 - 서비스 코드는 뭐! 이제 내가 받은 파일을 어떻게 처리할 것인지에 대해서 기능 구현을 해주면 된다.
 - 이부분은 아마 어떤 기능을 구현할지에 따라 다르기 때문에 .. 그냥 하고싶은대로 하면 됨
-
 - 내가 작성한 코드는, 이미지들을 S3에 올리고, 새로 업로드된 파일들에 position을 추가하여 images레포지토리에 저장하는 코드이다.
 
 ```js

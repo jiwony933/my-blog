@@ -12,14 +12,6 @@ interface Props {
 }
 
 export default function MarkdownViewer({ content }: Props) {
-  //   const copyCodeBlock = (code: string) => {
-  //     if (navigator.clipboard) {
-  //       navigator.clipboard.writeText(code).catch(() => {
-  //         alert('복사를 다시 시도해주세요.');
-  //       });
-  //     }
-  //   };
-
   return (
     <Content>
       <ReactMarkdown
