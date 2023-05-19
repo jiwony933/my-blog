@@ -1,10 +1,8 @@
 ---
-
-title: '[sql에러] [1093] You can't specify target table for update in FROM clause'
+title: 'Sql에러(1093) You cant specify target table for update in FROM clause'
 date: '2023-05-06'
 category: ''
-summary : 'You can't specify target table 'orderitemhistories' for update in FROM clause 업데이트 문 작성 시 에러 발생!'
-
+summary: 'You cant specify target table for update in FROM clause 업데이트 문 작성 시 에러 발생!'
 ---
 
 sql 업데이트 문을 작성하다가, 에러를 만나서 기록해본다.

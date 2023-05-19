@@ -3,21 +3,20 @@
   date: '2023-02-04'
   category: ''
   summary : 'set vs array'
-  ---
-  
-  벨로그 글을 추천받아서 읽어보았다.
+---
+
+벨로그 글을 추천받아서 읽어보았다.
 
 > (번역) 데이터 구조를 개선하여 코드 43% 줄이기  
 > [https://velog.io/@lky5697/react-junior-code-review-and-refactoring](https://velog.io/@lky5697/react-junior-code-review-and-refactoring)
-> 
+>
 > `배열 대신 Set로 checkedState를 사용하는 것입니다. 객체로 사용할 수도 있었지만, Set는 우리가 꽤 많이 사용하는 size에 접근하는 것과 같은 약간의 이점이 있습니다. Map과 비교하면 키-값 대신 선택한 모든 항목의 id만 알면 되기 때문에 Set이 약간 더 적합합니다.`
 
 여러개의 체크박스들을 배열 대신, set을 사용하여 데이터 구조를 개선하라는 내용이었다.
 
 평소에 Set을 써보지 않아서 흥미롭게 읽은 글인데, 그렇다면 Set이 뭐고, 왜 Array보다 좋은지? 에 대해서 공부해보게 되었다.
 
-Set
----
+## Set
 
 - 데이터 타입 중 하나로 중복되는 값을 가지지 않는 값들의 리스트이다.
 - Javascript에서는 ES6부터 제공되었다. (JAVA의 set과 비슷한 개념)

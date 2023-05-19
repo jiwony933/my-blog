@@ -1,10 +1,8 @@
 ---
-
-title: ''DDC 2023: DEV DAY' 참석 후기'
+title: 'DDC-2023 DEV DAY 참석 후기'
 date: '2023-01-28'
 category: ''
 summary : '멋쟁이 사자처럼에서 하는 'DDC 2023: DEV DAY'에 참석하였다. 간단한 느낀점 작성!'
-
 ---
 
 멋쟁이 사자처럼에서 하는 'DDC 2023: DEV DAY'에 참석하였다  

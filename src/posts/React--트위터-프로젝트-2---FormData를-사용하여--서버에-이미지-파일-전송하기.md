@@ -1,5 +1,5 @@
 ---
-title: '[React] 트위터 프로젝트 2) FormData를 사용하여, 서버에 이미지 파일 전송하기'
+title: '[React] 트위터 프로젝트 2) FormData를 사용하여, 서버에 이미지 파일 전송하기'
 date: '2022-09-25'
 category: ''
 summary: 'Form Data 를 사용하여, 이미지파일, 텍스트 동시에 서버에 보내기!'
