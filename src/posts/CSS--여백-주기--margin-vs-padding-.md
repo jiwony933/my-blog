@@ -1,7 +1,7 @@
 ---
 title: '[CSS] 여백 주기 (margin vs padding)'
 date: '2022-07-12'
-category: ''
+category: 'client'
 summary: 'margin vs padding !? 당신의 선택은??'
 ---
 

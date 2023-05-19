@@ -1,7 +1,7 @@
 ---
 title: 'sql 문법을 공부해보자'
 date: '2023-01-14'
-category: ''
+category: 'database'
 summary: 'sql 공부 day1 시작이 반이다!!'
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: '사용성을 고려한 주문 정보 테이블 만들기 (useRef, focus-within 등)'
 date: '2022-12-15'
-category: ''
+category: 'client'
 summary: 'UI/UX에 대해 생각해보고.. 개선하려고 노력하는 중'
 ---
 

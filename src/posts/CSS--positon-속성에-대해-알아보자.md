@@ -1,7 +1,7 @@
 ---
 title: '[CSS] positon 속성에 대해 알아보자'
 date: '2022-08-16'
-category: ''
+category: 'client'
 summary: 'position 속성 - relative, absolute, fixed'
 ---
 

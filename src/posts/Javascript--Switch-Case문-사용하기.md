@@ -1,7 +1,7 @@
 ---
 title: '[Javascript] Switch/Case문 사용하기'
 date: '2022-07-05'
-category: ''
+category: 'cs'
 summary: '복수의 조건문을 깔끔하게 작성할 때 사용하면 좋은 switch/case 문'
 ---
 

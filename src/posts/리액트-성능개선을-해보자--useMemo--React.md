@@ -1,7 +1,7 @@
 ---
 title: '[리액트 성능개선을 해보자] useMemo, React.memo'
 date: '2023-01-21'
-category: ''
+category: 'client'
 summary: 'memoization을 배워 성능 개선을 해봅시다..마치, 예전에 풀었던 문제가 똑같이 시험에 나오면, 다시 처음부터 계산하지않고 답만 적어서 시간을 아끼는 것 처럼!'
 ---
 

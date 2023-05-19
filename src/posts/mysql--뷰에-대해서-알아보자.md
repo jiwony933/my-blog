@@ -1,7 +1,7 @@
 ---
 title: '[mysql] 뷰에 대해서 알아보자'
 date: '2023-03-04'
-category: ''
+category: 'databse'
 summary: 'create VIEW !'
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: '[코딩테스트 풀기] week 1 (1) twoSum 함수 만들기'
 date: '2022-08-29'
-category: ''
+category: 'algorithm'
 summary: '배열의 두 수를 더했을 때 조건을 만족하는 index 찾기'
 ---
 

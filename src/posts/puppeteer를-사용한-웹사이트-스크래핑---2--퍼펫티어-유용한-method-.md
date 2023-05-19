@@ -1,7 +1,7 @@
 ---
 title: 'puppeteer를 사용한 웹사이트 스크래핑 - 2) 퍼펫티어 유용한 method!'
 date: '2023-04-08'
-category: ''
+category: 'server'
 summary: '퍼펫티어에서 가장 많이 사용했던 method들을 정리해봄!'
 ---
 

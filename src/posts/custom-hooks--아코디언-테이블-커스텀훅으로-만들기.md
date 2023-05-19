@@ -1,7 +1,7 @@
 ---
 title: '[custom hooks] 아코디언 테이블 커스텀훅으로 만들기'
 date: '2023-04-29'
-category: ''
+category: 'client'
 summary: '테이블을 만들고, 각 row에 하위 데이터들을 펼쳤다 닫았다 볼 수 있는 토글 형태의 아코디언 테이블 리스트를 만들었다. 생각보다 여기저기 사용할 일이 많길래 custom hooks로 만들어보았다!'
 ---
 

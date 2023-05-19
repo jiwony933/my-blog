@@ -1,7 +1,7 @@
 ---
 title: '[CSS] 화면 배치 정복 2 (display)'
 date: '2022-07-12'
-category: ''
+category: 'client'
 summary: '화면 레이아웃 구성을 위한 두번째 정리display : block항상 새로운 line에서 시작하며, full width를 갖는다display : flexdisplay : flex를 지정하지 않을 때, div내의 자식 요소들은 세로로 차례대로 배열 된다flex를 적용시키'
 ---
 

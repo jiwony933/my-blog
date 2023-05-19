@@ -1,7 +1,7 @@
 ---
 title: '[CS study] git / github / git 명령어'
 date: '2022-08-24'
-category: ''
+category: 'cs'
 summary: 'git / github / git 명령어를 공부해보자!'
 ---
 

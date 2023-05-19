@@ -1,7 +1,7 @@
 ---
 title: 'nestjs 컨트롤러 기초 + 라우팅 에러'
 date: '2023-02-18'
-category: ''
+category: 'server'
 summary: 'nestjs로 컨트롤러 개념 공부하면서 복습하기 + 겪었던 에러 공유'
 ---
 

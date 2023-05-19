@@ -1,7 +1,7 @@
 ---
 title: 'nestjs 이미지 파일 여러개 업로드 구현하기'
 date: '2023-03-18'
-category: ''
+category: 'server'
 summary: '클라이언트에서 form-data로 보낸 이미지 파일들을 nestJs 서버에서 받는 방법을 알아보자.'
 ---
 

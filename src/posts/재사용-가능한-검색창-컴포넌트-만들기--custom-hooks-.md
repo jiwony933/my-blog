@@ -1,7 +1,7 @@
 ---
 title: '재사용 가능한 검색창 컴포넌트 만들기 (custom hooks)'
 date: '2022-12-31'
-category: ''
+category: 'client'
 summary: 'custom hook 만들기 2탄'
 ---
 

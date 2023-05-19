@@ -28,8 +28,10 @@ export async function getPostsData(params?: string) {
   });
 
   return params
-    ? allPostsData.filter((post) => post.category === params)
-    : allPostsData;
+    ? allPostsData
+        .filter((post) => post.category === params)
+        .sort((a, b) => b.date.localeCompare(a.date))
+    : allPostsData.sort((a, b) => b.date.localeCompare(a.date));
 }
 
 export function getAllPostIds() {

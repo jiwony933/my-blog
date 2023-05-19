@@ -1,7 +1,7 @@
 ---
 title: 'Why Typescript?'
 date: '2022-11-26'
-category: ''
+category: 'cs'
 summary: '타입스크립트에 대해서 정리해보기!'
 ---
 

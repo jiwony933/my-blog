@@ -1,7 +1,7 @@
 ---
 title: '[React] 로그인/회원가입 기능 구현하기 (with Back-end)'
 date: '2022-09-07'
-category: ''
+category: 'client'
 summary: '지금까지 만들었던 instagram 클론에 회원가입, 로그인 기능을 추가하였다. fetch도 사용하고~ 서버 통신도 하고~'
 ---
 

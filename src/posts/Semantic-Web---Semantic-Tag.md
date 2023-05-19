@@ -1,7 +1,7 @@
 ---
 title: 'Semantic Web & Semantic Tag'
 date: '2022-08-16'
-category: ''
+category: 'cs'
 summary: 'semantic web and semantic tags'
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 'NextJs router.query가 undefined일 때..'
 date: '2023-02-11'
-category: ''
+category: 'server'
 summary: 'router.query가 왜 undefined죠.. 저 query에 있는 데이터 써야하는데요..!!!'
 ---
 

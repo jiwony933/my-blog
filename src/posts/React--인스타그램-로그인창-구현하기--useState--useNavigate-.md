@@ -1,7 +1,7 @@
 ---
 title: '[React] 인스타그램 로그인창 구현하기 (useState, useNavigate)'
 date: '2022-08-31'
-category: ''
+category: 'client'
 summary: '조건 만족 시, 로그인 버튼 활성화 + 버튼 클릭 시 다른 페이지 이동'
 ---
 

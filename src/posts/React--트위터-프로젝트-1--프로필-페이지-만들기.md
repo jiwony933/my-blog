@@ -1,7 +1,7 @@
 ---
 title: '[React] 트위터 프로젝트 1) 프로필 페이지 만들기'
 date: '2022-09-25'
-category: ''
+category: 'client'
 summary: 'File Reader를 사용하여, 프로필 사진 첨부 시 미리보기 화면 만들기 구현'
 ---
 

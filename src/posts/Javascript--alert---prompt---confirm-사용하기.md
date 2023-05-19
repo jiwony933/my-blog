@@ -1,7 +1,7 @@
 ---
 title: '[Javascript] alert / prompt / confirm 사용하기'
 date: '2022-07-05'
-category: ''
+category: 'client'
 summary: 'alert - 알려주기 (알림창) prompt -  입력받기 (문자 입력창) confirm - 확인 받기 (확인창 확인/취소)'
 ---
 

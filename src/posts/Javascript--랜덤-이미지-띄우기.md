@@ -1,7 +1,7 @@
 ---
 title: '[Javascript] 랜덤 이미지 띄우기'
 date: '2022-08-01'
-category: ''
+category: 'client'
 summary: '새로고침될 때 마다 랜덤으로 이미지를 띄울 수 있는 기능을 넣고자 했다(텍스트 아래에 있는 미모티콘 이미지가 계속 바뀜)Math.random() 함수는 0~1 사이의 임의의 난수를 반환한다Math.floor(num) num 이하 가장 큰 정수를 반환한다. (소수점 아래'
 ---
 

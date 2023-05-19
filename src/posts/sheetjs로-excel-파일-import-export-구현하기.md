@@ -1,7 +1,7 @@
 ---
 title: 'sheetjs로 excel 파일 import/export 구현하기'
 date: '2023-04-15'
-category: ''
+category: 'client'
 summary: '오늘은 어드민에서 대량의 데이터를 업로드하거나, 가공할때 엑셀로 업로드/다운로드가 가능하게 만드려고 한다! 엑셀 import/export 기능 구현을 위해 sheetjs(=XLSX) 라이브러리를 사용하였다.'
 ---
 

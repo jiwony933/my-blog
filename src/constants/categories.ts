@@ -3,7 +3,9 @@ export const CategoriesMap = {
   서버: 'server',
   데이터베이스: 'database',
   알고리즘: 'algorithm',
+  CS: 'cs',
   회고록: 'memoir',
+  독서: 'books',
   기타: 'etc',
 };
 

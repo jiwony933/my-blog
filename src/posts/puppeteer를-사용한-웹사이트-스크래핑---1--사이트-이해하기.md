@@ -1,7 +1,7 @@
 ---
 title: 'puppeteer를 사용한 웹사이트 스크래핑 - 1) 사이트 이해하기'
 date: '2023-03-31'
-category: ''
+category: 'server'
 summary: 'puppeteer를 사용한 웹사이트 스크래핑 도전!'
 ---
 

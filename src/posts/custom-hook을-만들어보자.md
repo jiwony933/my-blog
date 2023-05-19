@@ -1,7 +1,7 @@
 ---
 title: 'custom hook을 만들어보자'
 date: '2022-12-03'
-category: ''
+category: 'client'
 summary: 'custom hook은 코드, 로직의 반복을 최소화 하고, 재사용성을 높이기 위해서 사용한다. 나도 만들어보자!'
 ---
 

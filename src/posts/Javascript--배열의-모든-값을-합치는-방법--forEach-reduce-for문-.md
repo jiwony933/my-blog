@@ -1,7 +1,7 @@
 ---
 title: '[Javascript] 배열의 모든 값을 합치는 방법 (forEach/reduce/for문)'
 date: '2022-07-23'
-category: ''
+category: 'cs'
 summary: '배열 내의 요소들의 총 합계를 구하는 방법 여러개 정리해보기 (forEach/reduce/for문)'
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: '[CSS] 웹페이지에 새로운 폰트 적용하기'
 date: '2022-05-31'
-category: ''
+category: 'client'
 summary: '구글 폰트 불러오기~'
 ---
 

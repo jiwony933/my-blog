@@ -1,7 +1,7 @@
 ---
 title: 'Console 패널을 이용하자!'
 date: '2022-08-19'
-category: ''
+category: 'cs'
 summary: '개발자도구 - Console 사용하기'
 ---
 
