@@ -10,7 +10,7 @@ const global = css`
   @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable.css');
 
   body {
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
   }
 
   html,

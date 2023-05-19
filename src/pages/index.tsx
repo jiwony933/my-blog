@@ -1,12 +1,15 @@
-import Head from 'next/head';
-import Layout from 'src/components/layout/layout';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
-export default function Home() {
-  return (
-    <div>
-      <Head>
-        <title>jiwonyyy blog!</title>
-      </Head>
-    </div>
-  );
-}
+const Main = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    // 페이지 진입 시 리다이렉션을 수행합니다.
+    router.push('/posts');
+  }, []);
+
+  return <div>{/* 페이지 내용 */}</div>;
+};
+
+export default Main;

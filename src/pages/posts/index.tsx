@@ -4,7 +4,6 @@ import Layout from 'src/components/layout/layout';
 import { getPostsData } from 'src/modules';
 import NoPost from './no-post';
 import { isEmptyArray } from 'src/utils/common';
-import { NextSeoProps } from 'next-seo';
 import PageSeo from 'src/seo/PageSeo';
 
 interface P {
