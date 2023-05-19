@@ -28,7 +28,7 @@ import { FlexColumnBox } from 'src/styles/common';
 export const Container = styled(FlexColumnBox)`
   padding: 24px 12px;
   gap: 4px;
-  border: 0;
+
   border-bottom: 1px solid var(--grey400);
 `;
 
@@ -54,6 +54,10 @@ export const Summary = styled.div`
   font-size: 16px;
   line-height: 1.4em;
   cursor: pointer;
+
+  a {
+    word-break: break-all;
+  }
 `;
 
 export const Date = styled.div`
