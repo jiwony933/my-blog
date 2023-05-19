@@ -24,8 +24,8 @@ import MarkdownViewer from './MarkDownViewer';
 export const Container = styled(FlexColumnBox)<{ isMobile?: boolean }>`
   gap: 12px;
   padding-bottom: 200px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: ${({ isMobile }) => (isMobile ? '0px' : '20px')};
+  padding-right: ${({ isMobile }) => (isMobile ? '0px' : '20px')};
 `;
 
 export const Title = styled.div<{ isMobile?: boolean }>`

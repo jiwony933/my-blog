@@ -51,7 +51,8 @@ export const Title = styled.div`
 
 export const Summary = styled.div`
   color: var(--grey700);
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 1.4em;
   cursor: pointer;
 `;
 

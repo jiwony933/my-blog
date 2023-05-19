@@ -49,9 +49,8 @@ export const Container = styled(FlexColumnBox)<{ isMobile?: boolean }>`
 export const ContentWrapper = styled(FlexColumnBox)<{ isMobile?: boolean }>`
   position: absolute;
   max-width: ${({ isMobile }) => (isMobile ? '100%' : 'calc(100vw - 30px)')};
-  // 뷰포트 사이즈에맞게 반응형으로 구현
   padding: ${({ isMobile }) =>
-    isMobile ? '70px 0px 20px 20px' : '30px 30px 100px 240px'};
+    isMobile ? '70px 0px 20px 0px' : '30px 30px 100px 240px'};
   width: 100%;
   margin-top: 70px;
 `;
