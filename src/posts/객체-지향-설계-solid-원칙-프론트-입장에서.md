@@ -29,8 +29,6 @@ SOLID 원칙에 기반한 개발을 하게 되면,
 
 각각의 원칙에 대해서 알아보자 (프론트 기반으로 작성하였음)
 
-<br/>
-
 # 1. SRP 단일 책임 원칙
 
 > #### Single Responsibility Principle
@@ -135,7 +133,6 @@ const PaginationAndPvList = ({}: P) => {
 };
 
 export default PaginationAndPvList;
-s;
 ```
 
 이렇게 개선하고 나면, 사용자가 상품리스트를 볼 때까지 그 무엇도 뜨지 않는 흰 화면만 바라보며 기다리는 시간을 줄일 수 있다.
@@ -174,8 +171,6 @@ export const useToggle = (initialState = false) => {
 useToggle은 사용되는 컴포넌트가 어디인지는 상관 없다.
 그냥 상태를 true/false로만 바꾸는 책임만 가질 뿐 그 이상도 그이하도 아니다!
 customHook을 사용하는 것은 SRP원칙에도 해당되지만 이어서 나오는 OCP 원칙에도 해당된다.
-
-<br/><br/>
 
 # 2. OCP 개방-폐쇄 원칙
 
@@ -276,8 +271,6 @@ const convertValue = (value: string, type: string) => {
 
 이렇게 되면, 타입 변환 로직을 외부에서 처리하고, 변환 함수를 변경하거나 추가하는 경우 기존 커스텀 훅을 수정할 필요가 없다!
 
-<br/><br/>
-
 # 3. LSP 리스코프 치환 원칙
 
 > #### Liskov Substitution Principle
@@ -320,8 +313,6 @@ export default CustomImage;
 
 이것이 바로 서브타입을 슈퍼타입으로 대체할 수 있어야 한다는 리스코프 치환 원칙을 적용한 사례이다.
 
-<br/><br/>
-
 # 4. ISP 인터페이스 분리 원칙
 
 > #### Interface Segregation Principle
@@ -360,8 +351,6 @@ export default CustomImage;
 ```
 
 각각의 컴포넌트에서 실제로 사용할 정보만 분리하여 props로 전달해주는 것이 훨씬 바람직하다. 그리고 상위 컴포넌트에서 코드를 읽을 때에도 각각의 컴포넌트가 어떤 정보를 받아서 그려지는 내용인지에 유추하기에도 훨씬 좋다(가독성 up)
-
-<br/><br/>
 
 # 5. DIP 의존성 역전 원칙
 
@@ -405,10 +394,6 @@ useSku 함수는 추상화된 api 모듈을 외부에서 주입받아서 사용�
 
 - DIP 원칙을 따르기 위해 하위 컴포넌트에서 라우터의 쿼리 파라미터에 의존하지 않고, 최상위 페이지 컴포넌트에서 처리하도록 변경
 - 하위 컴포넌트는 상위 모듈에서 필요한 데이터를 props로 전달받아 사용하도록 변경
-
-<br/><br/><br/>
-
-<br/><br/><br/><br/>
 
 마지막으로 리액트 공식문서를 읽다가 마지막 부분이 인상깊어서 캡처하여 첨부해본다..
 ![](https://velog.velcdn.com/images/jiwonyyy/post/f7e49f45-28f6-454a-a901-cee0938d49a6/image.png)
