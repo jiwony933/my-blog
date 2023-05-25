@@ -14,7 +14,7 @@ export const Content = styled.div<{ isMobile?: boolean }>`
   }
 
   h1 {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   h2 {
@@ -52,6 +52,12 @@ export const Content = styled.div<{ isMobile?: boolean }>`
       color: var(--red800);
       font-size: 0.9em;
       font-weight: 500;
+    }
+  }
+
+  code {
+    span {
+      background-color: none;
     }
   }
 

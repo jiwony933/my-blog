@@ -42,7 +42,7 @@ export const CardWrapper = styled(FlexColumnBox)`
 `;
 
 export const Title = styled.div<{ isMobile: boolean }>`
-  font-size: ${({ isMobile }) => (isMobile ? '18px' : '24px')};
+  font-size: ${({ isMobile }) => (isMobile ? '20px' : '24px')};
   word-break: break-all;
   line-height: 1.4em;
   font-weight: 500;
