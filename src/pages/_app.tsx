@@ -20,6 +20,10 @@ function MyApp({ Component, pageProps }) {
           name='viewport'
           content='initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width'
         />
+        <meta
+          name='google-site-verification'
+          content='EgsEG20wT_CamoDor-iH3yAvBCPOlEjOBOBX71V8ZFw'
+        />
       </Head>
       <Script />
       <DefaultSeo />
