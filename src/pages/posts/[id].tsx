@@ -1,5 +1,7 @@
 import { GetServerSideProps } from 'next';
-import { ReactElement } from 'react';
+import { ReactElement, useEffect } from 'react';
+import { useRecoilState } from 'recoil';
+import { getFocusedCategoryState } from 'src/atoms/focusedCategory';
 import PostContent from 'src/components/blocks/Content';
 import Layout from 'src/components/layout/layout';
 import { getAllPostIds, getPostData } from 'src/modules';
@@ -10,6 +12,16 @@ interface P {
 }
 
 const ContentPage = ({ isMobile, postData }: P) => {
+  const [focusedCategory, setFocusedCategory] = useRecoilState(
+    getFocusedCategoryState
+  );
+
+  useEffect(() => {
+    if (postData) {
+      setFocusedCategory(postData.category);
+    }
+  }, [postData]);
+
   return (
     <Layout isMobile={isMobile}>
       <PostContent isMobile={isMobile} postData={postData} />

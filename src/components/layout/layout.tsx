@@ -1,20 +1,40 @@
 import { FlexColumnBox } from 'src/styles/common';
 import TopNav from './top-nav';
+import styled from '@emotion/styled';
+import SideBar from './pc-side-bar';
+import MobileMenuBar from './mobile-menu-bar';
+import { ReactNode } from 'react';
+import { useRecoilState } from 'recoil';
+import { getFocusedCategoryState } from 'src/atoms/focusedCategory';
 
 interface P {
-  focusedCategory?: string;
+  // focusedCategory?: string;
   children: ReactNode;
   isMobile: boolean;
 }
 
-const Layout = ({ focusedCategory, children, isMobile }: P) => {
+const Layout = ({ children, isMobile }: P) => {
+  const [focusedCategory, setFocusedCategory] = useRecoilState(
+    getFocusedCategoryState
+  );
+
+  const handleMenuClick = (category: string) => {
+    setFocusedCategory(category);
+  };
+
   return (
     <Container className='layout'>
       {<TopNav />}
       {isMobile ? (
-        <MobileMenuBar focusedCategory={focusedCategory} />
+        <MobileMenuBar
+          focusedCategory={focusedCategory}
+          handleMenuClick={handleMenuClick}
+        />
       ) : (
-        <SideBar focusedCategory={focusedCategory} />
+        <SideBar
+          focusedCategory={focusedCategory}
+          handleMenuClick={handleMenuClick}
+        />
       )}
       <ContentWrapper className='content' isMobile={isMobile}>
         {children}
@@ -24,11 +44,6 @@ const Layout = ({ focusedCategory, children, isMobile }: P) => {
 };
 
 export default Layout;
-
-import styled from '@emotion/styled';
-import SideBar from './pc-side-bar';
-import MobileMenuBar from './mobile-menu-bar';
-import { ReactNode } from 'react';
 
 export const Container = styled(FlexColumnBox)<{ isMobile?: boolean }>`
   max-width: ${({ isMobile }) => !isMobile && `var(--MAX_WIDTH)`};

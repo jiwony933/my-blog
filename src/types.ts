@@ -3,6 +3,7 @@ interface PostSummary {
   title: string;
   date: string;
   summary: string;
+  category: string;
 }
 
 interface Post extends PostSummary {

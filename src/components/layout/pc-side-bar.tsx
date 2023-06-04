@@ -1,17 +1,24 @@
 interface P {
-  focusedCategory?: string;
+  focusedCategory: string;
+  handleMenuClick: (category: string) => void;
 }
 
-const SideBar = ({ focusedCategory }: P) => {
-  console.log(focusedCategory);
+const SideBar = ({ focusedCategory, handleMenuClick }: P) => {
   return (
     <Container>
-      <MenuGroup href={`/posts`}>Posts</MenuGroup>
+      <MenuGroup
+        href={`/posts`}
+        focused={focusedCategory === 'All'}
+        onClick={() => handleMenuClick('All')}
+      >
+        All
+      </MenuGroup>
       {CATEGORIES.map((category) => (
         <MenuItem
           key={category}
           href={`/posts?category=${category}`}
           focused={focusedCategory === category}
+          onClick={() => handleMenuClick(category)}
         >
           {'> '}
           {category}

@@ -1,18 +1,24 @@
 interface P {
-  focusedCategory?: string;
+  focusedCategory: string;
+  handleMenuClick: (category: string) => void;
 }
 
-const MobileMenuBar = ({ focusedCategory }: P) => {
-  console.log(focusedCategory);
-
+const MobileMenuBar = ({ focusedCategory, handleMenuClick }: P) => {
   return (
     <Container>
-      <MenuItem href={`/posts`}>All</MenuItem>
+      <MenuItem
+        href={`/posts`}
+        focused={focusedCategory === 'All'}
+        onClick={() => handleMenuClick('All')}
+      >
+        All
+      </MenuItem>
       {CATEGORIES.map((category) => (
         <MenuItem
           key={category}
           href={`/posts?category=${category}`}
           focused={focusedCategory === category}
+          onClick={() => handleMenuClick(category)}
         >
           {category}
         </MenuItem>
@@ -25,6 +31,8 @@ export default MobileMenuBar;
 
 import styled from '@emotion/styled';
 import Link from 'next/link';
+import { useRecoilState } from 'recoil';
+import { getFocusedCategoryState } from 'src/atoms/focusedCategory';
 import { CATEGORIES } from 'src/constants/categories';
 import { FlexBox } from 'src/styles/common';
 import { isEmptyString } from 'src/utils/common';
