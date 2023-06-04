@@ -5,6 +5,9 @@ import { getPostsData } from 'src/modules';
 import NoPost from './no-post';
 import { isEmptyArray } from 'src/utils/common';
 import PageSeo from 'src/seo/PageSeo';
+import { getFocusedCategoryState } from 'src/atoms/focusedCategory';
+import { useRecoilState } from 'recoil';
+import { useEffect } from 'react';
 
 interface P {
   category?: string;
@@ -18,6 +21,19 @@ const PostPage = ({ isMobile, category, allPostsData }: P) => {
     description: `${category} 관련 포스팅을 확인하실 수 있습니다.`,
     keywords: `${category}, posts`,
   };
+
+  const [focusedCategory, setFocusedCategory] = useRecoilState(
+    getFocusedCategoryState
+  );
+
+  useEffect(() => {
+    if (category === '') {
+      setFocusedCategory('All');
+    }
+    if (category) {
+      setFocusedCategory(category);
+    }
+  }, [category]);
 
   return (
     <Layout isMobile={isMobile}>

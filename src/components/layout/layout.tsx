@@ -8,7 +8,6 @@ import { useRecoilState } from 'recoil';
 import { getFocusedCategoryState } from 'src/atoms/focusedCategory';
 
 interface P {
-  // focusedCategory?: string;
   children: ReactNode;
   isMobile: boolean;
 }
