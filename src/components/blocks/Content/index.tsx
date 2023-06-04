@@ -29,7 +29,7 @@ export const Container = styled(FlexColumnBox)<{ isMobile?: boolean }>`
 `;
 
 export const Title = styled.div<{ isMobile?: boolean }>`
-  font-size: ${({ isMobile }) => (isMobile ? '30px' : '44px')};
+  font-size: ${({ isMobile }) => (isMobile ? '26px' : '42px')};
   font-weight: 600;
 `;
 export const Date = styled(FlexEndBox)<{ isMobile?: boolean }>`

@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const Content = styled.div<{ isMobile?: boolean }>`
   display: flex;
   flex-direction: column;
-  gap: 1.3em;
+  gap: 1.2rem;
   width: 100%;
   overflow-y: scroll;
   line-height: 1.5;
@@ -14,23 +14,23 @@ export const Content = styled.div<{ isMobile?: boolean }>`
   }
 
   h1 {
-    font-size: 36px;
+    font-size: ${({ isMobile }) => (isMobile ? '30px' : '36px')};
   }
 
   h2 {
-    font-size: 32px;
+    font-size: ${({ isMobile }) => (isMobile ? '26px' : '32px')};
   }
 
   h3 {
-    font-size: 24px;
+    font-size: ${({ isMobile }) => (isMobile ? '20px' : '24px')};
   }
 
   h4 {
-    font-size: 18px;
+    font-size: ${({ isMobile }) => (isMobile ? '16px' : '18px')};
   }
 
   h5 {
-    font-size: 16px;
+    font-size: ${({ isMobile }) => (isMobile ? '14px' : '16px')};
   }
 
   img {
@@ -38,9 +38,10 @@ export const Content = styled.div<{ isMobile?: boolean }>`
   }
 
   p,
+  strong,
   li {
     max-width: 100%;
-    font-size: ${({ isMobile }) => (isMobile ? '13px' : '16px')};
+    font-size: ${({ isMobile }) => (isMobile ? '12px' : '16px')};
     line-height: 1.8em;
     margin-bottom: 0.2em;
     gap: 0.2em;
@@ -50,7 +51,7 @@ export const Content = styled.div<{ isMobile?: boolean }>`
       border-radius: 4px;
       background-color: var(--grey100);
       color: var(--red800);
-      font-size: 0.9em;
+      font-size: ${({ isMobile }) => (isMobile ? '11px' : '0.9em')};
       font-weight: 500;
     }
   }
@@ -69,7 +70,7 @@ export const Content = styled.div<{ isMobile?: boolean }>`
     margin: 1em 0;
     border-left: 4px solid var(--blue800);
     padding: 12px 16px;
-    font-size: 18px;
+    font-size: ${({ isMobile }) => (isMobile ? '14px' : '18px')};
     line-height: 1.5;
     margin-bottom: 0.2em;
   }
