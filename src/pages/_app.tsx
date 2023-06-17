@@ -7,6 +7,9 @@ import { Global } from '@emotion/react';
 import App, { AppContext } from 'next/app';
 import { useIsMobile } from 'src/hooks/useIsMobile';
 import { RecoilRoot } from 'recoil';
+import { RecoilEnv } from 'recoil';
+
+RecoilEnv.RECOIL_DUPLICATE_ATOM_KEY_CHECKING_ENABLED = false;
 
 function MyApp({ Component, pageProps }) {
   const isMobile = useIsMobile();
