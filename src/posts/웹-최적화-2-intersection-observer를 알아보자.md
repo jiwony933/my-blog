@@ -1,5 +1,5 @@
 ---
-title: '웹 최적화 1) intersection Observer를 알아보자! '
+title: '웹 최적화 2) intersection Observer를 알아보자! '
 date: '2023-06-24'
 category: 'client'
 summary: '대상을 쭉 관찰하다가.. 발견되는 즉시 함수를 실행시키는!'
