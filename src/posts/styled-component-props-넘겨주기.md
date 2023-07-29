@@ -1,5 +1,5 @@
 ---
-title: 'Styled-component에서 props 똑똑하게 넘겨주기'
+title: '💅styled-component에서 props 똑똑하게 넘겨주기'
 date: '2023-07-29'
 category: 'client'
 summary: 'Warning: Received `true` for a non-boolean attribute `{props 명}`. $prefix를 사용해보자! '
