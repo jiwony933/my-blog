@@ -14,15 +14,15 @@ export const Content = styled.div<{ isMobile?: boolean }>`
   }
 
   h1 {
-    font-size: ${({ isMobile }) => (isMobile ? '30px' : '36px')};
+    font-size: ${({ isMobile }) => (isMobile ? '22px' : '34px')};
   }
 
   h2 {
-    font-size: ${({ isMobile }) => (isMobile ? '26px' : '32px')};
+    font-size: ${({ isMobile }) => (isMobile ? '20px' : '32px')};
   }
 
   h3 {
-    font-size: ${({ isMobile }) => (isMobile ? '20px' : '24px')};
+    font-size: ${({ isMobile }) => (isMobile ? '18px' : '24px')};
   }
 
   h4 {
@@ -86,11 +86,13 @@ export const Content = styled.div<{ isMobile?: boolean }>`
     }
   }
 
-  li {
-    list-style-type: disc;
+  ul {
+    li {
+      list-style-type: disc;
 
-    ::marker {
-      color: var(--grey800);
+      ::marker {
+        color: var(--grey800);
+      }
     }
   }
 `;

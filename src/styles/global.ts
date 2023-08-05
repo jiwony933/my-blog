@@ -114,11 +114,11 @@ const global = css`
     display: block;
   }
 
-  ol,
-  ul,
+  /* ol, */
+  /* ul,
   li {
     list-style: none;
-  }
+  } */
   /* blockquote,
   q {
     quotes: none;
