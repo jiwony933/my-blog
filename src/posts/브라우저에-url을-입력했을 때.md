@@ -166,12 +166,12 @@ summary: '브라우저에 url을 입력했을 때 일어나는 일은? 아주 �
 
 ### 7. 화면에 rendering~
 
-<br><br><br><br><br><br>
+- 이후는 화면에 렌더링하는 과정이다. (html 파싱부터)
 
 단순히 면접 답변용으로 생각했을 때에는, DNS에서 IP주소를 알아내서~ 로 알고 있다가 .. 크롬 브라우저 아키텍처에서부터 시작하게 되니 생각보다 훨씬 더 깊은 과정이었고 공부할 게 많다는 생각이 들었다!
 
-<br><br><br><br>
-
-> Reference
-> https://developer.chrome.com/blog/inside-browser-part1/ >https://www.youtube.com/@withBoaz
-> '가장 쉬운 웹개발 with Boaz' 유튜브에서 일목 요연하게 잘 설명해준 부분을 다시 포스팅 하며 복기해보았다.
+> ### Reference
+>
+> https://developer.chrome.com/blog/inside-browser-part1
+>
+> https://www.youtube.com/@withBoaz '가장 쉬운 웹개발 with Boaz' 유튜브에서 일목 요연하게 잘 설명해준 부분을 다시 포스팅 하며 복기해보았다.
