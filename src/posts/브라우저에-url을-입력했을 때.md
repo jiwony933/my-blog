@@ -166,11 +166,11 @@ summary: '브라우저에 url을 입력했을 때 일어나는 일은? 아주 �
 
 ### 7. 화면에 rendering~
 
-<br/><br/><br/><br/><br/><br/>
+<br><br><br><br><br><br>
 
 단순히 면접 답변용으로 생각했을 때에는, DNS에서 IP주소를 알아내서~ 로 알고 있다가 .. 크롬 브라우저 아키텍처에서부터 시작하게 되니 생각보다 훨씬 더 깊은 과정이었고 공부할 게 많다는 생각이 들었다!
 
-<br/><br/><br/><br/>
+<br><br><br><br>
 
 > Reference
 > https://developer.chrome.com/blog/inside-browser-part1/ >https://www.youtube.com/@withBoaz
