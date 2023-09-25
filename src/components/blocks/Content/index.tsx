@@ -11,6 +11,7 @@ const PostContent = ({ postData, isMobile }: P) => {
       <Title isMobile={isMobile}>{postData.title}</Title>
       <Date isMobile={isMobile}>{postData.date} 에 작성됨</Date>
       <MarkdownViewer content={postData.content} />
+      <Comments />
     </Container>
   );
 };
@@ -20,6 +21,7 @@ export default PostContent;
 import styled from '@emotion/styled';
 import { FlexColumnBox, FlexEndBox } from 'src/styles/common';
 import MarkdownViewer from './MarkDownViewer';
+import Comments from './comments';
 
 export const Container = styled(FlexColumnBox)<{ isMobile?: boolean }>`
   gap: 12px;
