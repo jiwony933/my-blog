@@ -30,7 +30,6 @@ function MyApp({ Component, pageProps }) {
             content='EgsEG20wT_CamoDor-iH3yAvBCPOlEjOBOBX71V8ZFw'
           />
         </Head>
-        <Script />
         <DefaultSeo />
         <Global styles={global} />
         {getLayout(<Component isMobile={isMobile} {...pageProps} />)}
