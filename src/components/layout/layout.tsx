@@ -3,7 +3,7 @@ import TopNav from './top-nav';
 import styled from '@emotion/styled';
 import SideBar from './pc-side-bar';
 import MobileMenuBar from './mobile-menu-bar';
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import { getFocusedCategoryState } from 'src/atoms/focusedCategory';
 

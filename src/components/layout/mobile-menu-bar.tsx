@@ -8,7 +8,7 @@ const MobileMenuBar = ({ focusedCategory, handleMenuClick }: P) => {
     <Container>
       <MenuItem
         href={`/posts`}
-        focused={focusedCategory === 'All'}
+        focused={(focusedCategory === 'All').toString()}
         onClick={() => handleMenuClick('All')}
       >
         All
@@ -17,7 +17,7 @@ const MobileMenuBar = ({ focusedCategory, handleMenuClick }: P) => {
         <MenuItem
           key={category}
           href={`/posts?category=${category}`}
-          focused={focusedCategory === category}
+          focused={(focusedCategory === category).toString()}
           onClick={() => handleMenuClick(category)}
         >
           {category}
@@ -31,11 +31,8 @@ export default MobileMenuBar;
 
 import styled from '@emotion/styled';
 import Link from 'next/link';
-import { useRecoilState } from 'recoil';
-import { getFocusedCategoryState } from 'src/atoms/focusedCategory';
 import { CATEGORIES } from 'src/constants/categories';
 import { FlexBox } from 'src/styles/common';
-import { isEmptyString } from 'src/utils/common';
 
 export const Container = styled(FlexBox)`
   width: 100%;
@@ -48,10 +45,10 @@ export const Container = styled(FlexBox)`
   padding: 12px 24px;
 `;
 
-export const MenuItem = styled(Link)<{ focused?: boolean }>`
+export const MenuItem = styled(Link)<{ focused?: string }>`
   text-decoration: none;
   background-color: ${({ focused }) =>
-    focused ? 'var(--blue100)' : 'var(--grey100)'};
+    focused === 'true' ? 'var(--blue100)' : 'var(--grey100)'};
   color: black;
   font-weight: 500;
   display: flex;

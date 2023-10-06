@@ -8,7 +8,7 @@ const SideBar = ({ focusedCategory, handleMenuClick }: P) => {
     <Container>
       <MenuGroup
         href={`/posts`}
-        focused={focusedCategory === 'All'}
+        focused={(focusedCategory === 'All').toString()}
         onClick={() => handleMenuClick('All')}
       >
         All
@@ -17,7 +17,7 @@ const SideBar = ({ focusedCategory, handleMenuClick }: P) => {
         <MenuItem
           key={category}
           href={`/posts?category=${category}`}
-          focused={focusedCategory === category}
+          focused={(focusedCategory === category).toString()}
           onClick={() => handleMenuClick(category)}
         >
           {'> '}
@@ -46,12 +46,13 @@ export const Container = styled(FlexColumnBox)`
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 `;
 
-export const MenuGroup = styled(Link)<{ focused?: boolean }>`
+export const MenuGroup = styled(Link)<{ focused?: string }>`
   text-decoration: none;
   color: black;
   padding: 6px;
   cursor: pointer;
-  background-color: ${({ focused }) => (focused ? 'var(--blue100)' : 'white')};
+  background-color: ${({ focused }) =>
+    focused === 'true' ? 'var(--blue100)' : 'white'};
   width: 100%;
 
   :hover {
