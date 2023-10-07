@@ -1,7 +1,7 @@
 ---
-  title: '[javascipt] Set vs Array 시간복잡도 비교 (+ 해시테이블이란?)'
+  title: '[javascript] Set vs Array 시간복잡도 비교 (+ 해시테이블이란?)'
   date: '2023-02-04'
-  category: 'cs'
+  category: 'javascript'
   summary : 'set vs array'
 ---
 

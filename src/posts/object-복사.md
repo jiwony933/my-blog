@@ -1,7 +1,7 @@
 ---
 title: 'object를 복사하는 여러가지 방법과 그 차이점에 대해 알아보자 (feat. structuredClone())'
 date: '2023-05-30'
-category: 'etc'
+category: 'javascript'
 summary: 'Deep Copy, Deep+shallow Copy, shallow Copy 대체 어디까지 복사되는 걸까?'
 ---
 
