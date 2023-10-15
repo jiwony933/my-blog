@@ -5,6 +5,7 @@ import { getFocusedCategoryState } from 'src/atoms/focusedCategory';
 import PostContent from 'src/components/blocks/Content';
 import Layout from 'src/components/layout/layout';
 import { getAllPostIds, getPostData } from 'src/modules';
+import PageSeo from 'src/seo/PageSeo';
 
 interface P {
   postData: Post;
@@ -12,6 +13,14 @@ interface P {
 }
 
 const ContentPage = ({ isMobile, postData }: P) => {
+  const { title, category } = postData;
+
+  const seoData = {
+    title: `${title} | ${category}`,
+    description: `${title}`,
+    keywords: `${category}, posts, ${title}`,
+  };
+
   const [focusedCategory, setFocusedCategory] = useRecoilState(
     getFocusedCategoryState
   );
@@ -24,6 +33,7 @@ const ContentPage = ({ isMobile, postData }: P) => {
 
   return (
     <Layout isMobile={isMobile}>
+      <PageSeo {...seoData} />
       <PostContent isMobile={isMobile} postData={postData} />
     </Layout>
   );
