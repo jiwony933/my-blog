@@ -4,17 +4,17 @@ export const DEFAULT_OG_IMAGE = '/seo-image.png';
 export const DEFAULT_DESCRIPTION =
   '프론트엔드 개발자 김지원 기술 블로그 입니다.';
 export const DEFAULT_KEYWORDS =
-  'nextjs,react,typescript,frontend,webdev,dev,리액트,프론트엔드,웹개발,개발자,개발';
+  'nextjs,react,typescript,frontend,webdev,dev,리액트,프론트엔드,웹개발,개발자,개발,김지원,nestjs';
 
 export const NEXT_SEO_DEFAULT: NextSeoProps = {
   title: 'main',
   description: DEFAULT_DESCRIPTION,
-  canonical: 'https://my-blog-iota-beige.vercel.app',
+  canonical: 'https://jiwonyyy.site',
   titleTemplate: 'jiwonyyy blog - %s',
   openGraph: {
     type: 'website',
     locale: 'ko_KR',
-    url: 'https://my-blog-iota-beige.vercel.app',
+    url: 'https://jiwonyyy.site',
     title: 'jiwonyyy blog',
     description: DEFAULT_DESCRIPTION,
     images: [
