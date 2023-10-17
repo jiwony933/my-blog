@@ -10,6 +10,7 @@ import {
 import { useState } from 'react';
 import ArrowUpIcon from 'src/assets/icons/ArrowUpIcon';
 import ArrowDownIcon from 'src/assets/icons/ArrowDownIcon';
+import { useRouter } from 'next/router';
 
 interface P {
   mainPosts: PostSummary[];
@@ -18,6 +19,8 @@ interface P {
 
 const MainPosts = ({ mainPosts, isMobile }: P) => {
   const [isPinnedOpen, setIsPinnedOpen] = useState(true);
+  const router = useRouter();
+
   return (
     <Container>
       <TitleWrapper>
