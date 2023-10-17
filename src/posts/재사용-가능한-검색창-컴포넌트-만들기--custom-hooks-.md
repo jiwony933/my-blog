@@ -3,6 +3,7 @@ title: '재사용 가능한 검색창 컴포넌트 만들기 (custom hooks)'
 date: '2022-12-31'
 category: 'client'
 summary: 'custom hook 만들기 2탄'
+pinned: true
 ---
 
 ![](https://velog.velcdn.com/images/jiwonyyy/post/ef819e18-1e13-412a-9c3e-fe6eda3516fc/image.png)

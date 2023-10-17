@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { FlexColumnBox } from 'src/styles/common';
 
-export const Container = styled(FlexColumnBox)`
+export const Container = styled(FlexColumnBox)<{ isMobile?: boolean }>`
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
   padding: 1.2rem;
   height: 100%;

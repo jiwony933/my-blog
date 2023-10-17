@@ -3,6 +3,7 @@ title: '[DB] Index 에 대해서 알아본 긴긴 스토리'
 date: '2023-05-14'
 category: 'database'
 summary: '인덱스를 설정해서 조회 성능을 개선해보자 !!'
+pinned: true
 ---
 
 ## 'index를 탄다'는 것은 뭘까?

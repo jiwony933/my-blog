@@ -8,7 +8,7 @@ interface P {
 
 const MainPostCard = ({ post, isMobile }: P) => {
   return (
-    <Container>
+    <Container isMobile={isMobile}>
       <FlexColumnBox>
         <Title isMobile={isMobile}>{post.title}</Title>
         {!isMobile && <Summary>{post.summary}</Summary>}
