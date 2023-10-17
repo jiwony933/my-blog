@@ -27,10 +27,11 @@ export const PostsWrapper = styled(FlexBox)<{ isMobile?: boolean }>`
     `
     flex-direction: column;
     height: auto;
+    grid-template-columns: repeat(2, 1fr);
   `}
 `;
 
-export const Title = styled.div`
+export const Title = styled.div<{ isMobile?: boolean }>`
   font-size: 1.4rem;
   font-weight: 700;
   display: flex;

@@ -21,7 +21,7 @@ export const Container = styled(FlexColumnBox)<{ isMobile?: boolean }>`
 `;
 
 export const Title = styled.div<{ isMobile?: boolean }>`
-  font-size: ${({ isMobile }) => (isMobile ? '1.4rem' : '1.2rem')};
+  font-size: ${({ isMobile }) => (isMobile ? '1.1rem' : '1.4rem')};
   font-weight: 700;
   cursor: pointer;
   color: var(--blue900);
