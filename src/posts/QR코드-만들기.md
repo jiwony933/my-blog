@@ -1,7 +1,7 @@
 ---
  title: 'QR코드 만들기(qrcode.react)'
  date: '2023-09-08'
- category: 'client'
+ category: 'library-framework'
  summary: '내가 원하는 정보를 담은 QR 코드 만들기'
 ---
 

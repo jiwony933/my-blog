@@ -1,7 +1,7 @@
 ---
  title: 'QR코드 스캐너 만들기(qr-scanner)'
  date: '2023-09-15'
- category: 'client'
+ category: 'library-framework'
  summary: '웹에서 QR을 읽는 스캐너를 만들어 보자'
 ---
 
