@@ -1,8 +1,9 @@
 ---
-title: '[코드 리팩토링] 하위 컴포넌트의 router에 대한 종속성 없애기'
+title: '하위 컴포넌트의 router에 대한 종속성 없애기'
 date: '2023-04-22'
 category: 'client'
 summary: '코드 리팩토링 포스팅! 하위 컴포넌트의 역할에 대해서 생각해보자'
+pinned: true
 ---
 
 ## 개요

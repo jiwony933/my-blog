@@ -190,8 +190,6 @@ const toggleAllItems = () => {
 그리하여 완성된 useToggleList 커스텀 훅
 
 ```js
-import { useState } from 'react';
-
 export const useToggleList = (items: any[]) => {
   const [openedIds, setOpenedIds] = useState<number[]>([]);
 
@@ -312,5 +310,5 @@ export const useToggleList = (items: any[]) => {
              </td>
 ```
 
-각각 컴포넌트의 역할이 더 눈에 잘보이고, 코드의 가독성 또한 높아졌다!  
+각각 컴포넌트의 역할이 더 눈에 잘보이고, 코드의 가독성 또한 높아졌다.
 그리고 같은 기능을 하는 다른 컴포넌트에서 또 한번 함수 정의를 하지 않아도 되고 쓰고 싶을떄 마다 꺼내쓰기 가능
