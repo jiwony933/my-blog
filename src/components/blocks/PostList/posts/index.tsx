@@ -9,8 +9,6 @@ interface P {
 }
 
 const Posts = ({ posts, isMobile }: P) => {
-  // '쿼리스트링이 없이 /posts로 접근했을 때'와 '쿼리스트링이 있을 때'를 구분하기 위해
-  // isAllPosts라는 변수를 추가하였습니다.
   const router = useRouter();
   const isAllPosts = router.asPath === '/posts';
 

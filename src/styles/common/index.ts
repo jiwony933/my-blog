@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import Link from 'next/link';
 
 export const FlexBox = styled.div<{
   gap?: number;
@@ -63,4 +64,9 @@ export const SpaceBetweenBox = styled(FlexBox)`
 
 export const FlexEndBox = styled(FlexBox)`
   justify-content: flex-end;
+`;
+
+export const CustomLink = styled(Link)`
+  all: unset;
+  text-decoration: none;
 `;

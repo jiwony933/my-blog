@@ -1,6 +1,7 @@
-import { FlexColumnBox } from 'src/styles/common';
+import { CustomLink, FlexColumnBox } from 'src/styles/common';
 import { Container, Date, Summary, Title } from './styles';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 interface P {
   post: PostSummary;
@@ -8,18 +9,19 @@ interface P {
 }
 
 const MainPostCard = ({ post, isMobile }: P) => {
-  const router = useRouter();
-  const handleCardClick = () => {
-    router.push(`/posts/${post.id}`);
-  };
   return (
-    <Container isMobile={isMobile} onClick={handleCardClick}>
-      <FlexColumnBox>
-        <Title isMobile={isMobile}>{post.title}</Title>
-        {!isMobile && <Summary>{post.summary}</Summary>}
-      </FlexColumnBox>
-      <Date>{post.date}</Date>
-    </Container>
+    <CustomLink
+      href={`/posts/${post.id}`}
+      style={{ textDecoration: 'none', color: 'black' }}
+    >
+      <Container isMobile={isMobile}>
+        <FlexColumnBox>
+          <Title isMobile={isMobile}>{post.title}</Title>
+          {!isMobile && <Summary>{post.summary}</Summary>}
+        </FlexColumnBox>
+        <Date>{post.date}</Date>
+      </Container>
+    </CustomLink>
   );
 };
 
