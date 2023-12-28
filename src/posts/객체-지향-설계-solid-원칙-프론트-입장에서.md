@@ -182,9 +182,9 @@ customHook을 사용하는 것은 SRP원칙에도 해당되지만 이어서 나�
 원본 소스 코드를 변경하지 않고 확장할 수 있는 방식으로 컴포넌트를 구조화 하는 것이 좋다.
 조건에 의해 컴포넌트의 내부 로직이 계속해서 변경된다면 위험할 수 있다.
 
-#### 위반 사례 적발...!
+#### 위반 사례 적발
 
-부끄럽지만 내가 작성한 아주 안좋은 코드의 예시..
+부끄럽지만 내가 작성한 아주 안좋은 코드의 예시다.
 
 ![](https://velog.velcdn.com/images/jiwonyyy/post/70c24828-a2a8-440c-b9f3-44ced6626261/image.png)
 
@@ -233,7 +233,7 @@ export function useInputs<T>(initialInputs: T) {
 하지만, 이 코드를 gpt한테 OCP가 맞냐고 물었더니, 이것도 아니란다!
 ![](https://velog.velcdn.com/images/jiwonyyy/post/9475e13d-9edb-4003-818d-a46813cacab0/image.png)
 
-듣고 보니 하나하나 맞는말이다..
+듣고 보니 하나하나 맞는말이다.
 타입이 추가될 때마다 custom Hook의 주요 로직의 내부 조건문을 변경해야하는 상황이 발생하는 것이다..! 그래서 그것 마저 분리해버리기
 
 ```js

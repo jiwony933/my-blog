@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import global from '../styles/global';
 import '../styles/variable.css';
-import Script from 'next/script';
 import DefaultSeo from 'src/seo/DefaultSeo';
 import { Global } from '@emotion/react';
 import App, { AppContext } from 'next/app';
@@ -12,7 +11,7 @@ import { useEffect } from 'react';
 
 RecoilEnv.RECOIL_DUPLICATE_ATOM_KEY_CHECKING_ENABLED = false;
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   const isMobile = useIsMobile();
   const getMobileLayout = Component.getMobileLayout ?? ((page) => page);
   const getPcLayout = Component.getPcLayout ?? ((page) => page);

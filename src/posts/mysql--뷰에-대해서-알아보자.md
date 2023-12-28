@@ -1,7 +1,7 @@
 ---
 title: '[mysql] 뷰에 대해서 알아보자'
 date: '2023-03-04'
-category: 'databse'
+category: 'database'
 summary: 'create VIEW !'
 ---
 
@@ -88,6 +88,6 @@ export class TotalCost {
 }
 ```
 
-사용해보니 편리하고 좋다...!  
+사용해보니 편리하고 좋다...
 특히 데이터의 무결성을 유지하면서, 내가 원하는 정보를 한번에 볼 수 있다니..?  
 하지만 엄청난 쿼리 실행을 축소할 수 있는 방법을 찾아야 겠다.

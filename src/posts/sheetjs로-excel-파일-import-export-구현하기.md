@@ -5,15 +5,12 @@ category: 'library-framework'
 summary: '오늘은 어드민에서 대량의 데이터를 업로드하거나, 가공할때 엑셀로 업로드/다운로드가 가능하게 만드려고 한다! 엑셀 import/export 기능 구현을 위해 sheetjs(=XLSX) 라이브러리를 사용하였다.'
 ---
 
-다시 돌아온 블로깅 day..!
-
-오늘은 어드민에서 대량의 데이터를 업로드하거나, 가공할때 엑셀로 업로드/다운로드가 가능하게 만드려고 한다!
+어드민에서 대량의 데이터를 업로드하거나, 가공할때 엑셀로 업로드/다운로드가 가능한 기능을 구현하려고 한다.
 
 엑셀 import/export 기능 구현을 위해 sheetjs(=XLSX) 라이브러리를 사용하였다.
 
 ![](https://velog.velcdn.com/images/jiwonyyy/post/05a68fe4-767e-4f6d-b572-a1c7aa8bb9f0/image.png)
-
-weekly download가 무려 200만에 가까운..! 믿고 가보자고~!
+weekly download가 무려 200만에 가까운 아주 유명한 라이브러리이다.
 
 # 엑셀 파일 업로드
 
@@ -97,7 +94,7 @@ const handleExcelFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
 # 엑셀 파일 다운로드
 
-엑셀 파일을 다운받는거는 좀 더 간단하다!
+엑셀 파일을 다운받는거는 좀 더 간단하다.
 
 여기서 좀더 이해하기 쉬우려면 workbook과 worksheet에 대해서 알면 되는데,
 
@@ -144,5 +141,3 @@ const handleExcelDownload = () => {
 ```
 
 ![](https://velog.velcdn.com/images/jiwonyyy/post/8ef93531-d8f3-49bc-bc9b-ee1b6fc34e15/image.png)
-
-나는 블로그 쓰는게 너무 좋다 ! 나는 행복하다 !
