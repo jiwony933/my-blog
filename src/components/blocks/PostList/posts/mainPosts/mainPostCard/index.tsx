@@ -17,7 +17,6 @@ const MainPostCard = ({ post, isMobile }: P) => {
       <Container isMobile={isMobile}>
         <FlexColumnBox>
           <Title isMobile={isMobile}>{post.title}</Title>
-          {!isMobile && <Summary>{post.summary}</Summary>}
         </FlexColumnBox>
         <Date>{post.date}</Date>
       </Container>

@@ -14,15 +14,15 @@ export const Content = styled.div<{ isMobile?: boolean }>`
   }
 
   h1 {
-    font-size: ${({ isMobile }) => (isMobile ? '22px' : '34px')};
-  }
-
-  h2 {
     font-size: ${({ isMobile }) => (isMobile ? '20px' : '32px')};
   }
 
+  h2 {
+    font-size: ${({ isMobile }) => (isMobile ? '18px' : '30px')};
+  }
+
   h3 {
-    font-size: ${({ isMobile }) => (isMobile ? '18px' : '24px')};
+    font-size: ${({ isMobile }) => (isMobile ? '17px' : '24px')};
   }
 
   h4 {
