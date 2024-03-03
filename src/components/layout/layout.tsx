@@ -48,6 +48,7 @@ export const Container = styled(FlexColumnBox)<{ isMobile?: boolean }>`
   max-width: ${({ isMobile }) => !isMobile && `var(--MAX_WIDTH)`};
   position: relative;
   min-height: -webkit-fill-available;
+
   @supports (-webkit-touch-callout: none) {
     min-height: -webkit-fill-available;
   }
@@ -58,6 +59,11 @@ export const Container = styled(FlexColumnBox)<{ isMobile?: boolean }>`
   left: 0;
   right: 0;
   overflow-y: scroll;
+
+  // 스크롤바 숨기기
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const ContentWrapper = styled(FlexColumnBox)<{ isMobile?: boolean }>`
